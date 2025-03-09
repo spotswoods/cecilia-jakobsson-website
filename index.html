@@ -3,6 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7XXTKR460X"></script>
+  <script>
+    // Initialize dataLayer
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Set default consent to 'denied' for analytics
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+    
+    // Basic gtag configuration
+    gtag('js', new Date());
+    gtag('config', 'G-S7XXTKR460X'); // Replace with your actual Measurement ID
+  </script>
+
   <title>Cecilia Jakobsson - Den sjungande reseledaren</title>
   <style>
     * {
@@ -880,5 +896,263 @@
       </div>
     </div>
   </footer>
+  <!-- Cookie Consent HTML -->
+<div id="cookie-consent" class="cookie-consent">
+  <div class="cookie-content">
+    <h3>Vi använder cookies</h3>
+    <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och personanpassa innehåll. Genom att klicka på "Acceptera alla" godkänner du vår användning av cookies. Du kan också välja att anpassa dina inställningar.</p>
+    <div class="cookie-buttons">
+      <button id="accept-all-cookies" class="cookie-btn accept-btn">Acceptera alla</button>
+      <button id="customize-cookies" class="cookie-btn customize-btn">Anpassa inställningar</button>
+      <button id="reject-cookies" class="cookie-btn reject-btn">Avvisa alla</button>
+    </div>
+  </div>
+  
+  <!-- Cookie Settings Panel (Hidden by default) -->
+  <div id="cookie-settings" class="cookie-settings">
+    <h3>Cookie-inställningar</h3>
+    <div class="cookie-option">
+      <div>
+        <input type="checkbox" id="necessary-cookies" checked disabled>
+        <label for="necessary-cookies">Nödvändiga cookies</label>
+      </div>
+      <p>Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av.</p>
+    </div>
+    <div class="cookie-option">
+      <div>
+        <input type="checkbox" id="analytics-cookies">
+        <label for="analytics-cookies">Analys-cookies</label>
+      </div>
+      <p>Hjälper oss att förstå hur besökare använder webbplatsen, vilket gör att vi kan förbättra hur den fungerar.</p>
+    </div>
+    <div class="cookie-option">
+      <div>
+        <input type="checkbox" id="marketing-cookies">
+        <label for="marketing-cookies">Marknadsförings-cookies</label>
+      </div>
+      <p>Används för att spåra besökare på webbplatser. Avsikten är att visa annonser som är relevanta och engagerande.</p>
+    </div>
+    <div class="cookie-buttons settings-buttons">
+      <button id="save-preferences" class="cookie-btn save-btn">Spara inställningar</button>
+      <button id="cancel-preferences" class="cookie-btn cancel-btn">Avbryt</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add the following CSS to your stylesheet -->
+<style>
+  .cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none; /* Will be shown with JS */
+  }
+  
+  .cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cookie-content h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .cookie-content p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .cookie-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .accept-btn {
+    background-color: #1a76d2;
+    color: white;
+  }
+  
+  .accept-btn:hover {
+    background-color: #0d5ebd;
+  }
+  
+  .customize-btn {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .customize-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .reject-btn {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .reject-btn:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .cookie-settings {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    display: none; /* Hidden by default */
+  }
+  
+  .cookie-option {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cookie-option > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .cookie-option label {
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .cookie-option p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .settings-buttons {
+    margin-top: 20px;
+  }
+  
+  .save-btn {
+    background-color: #1a76d2;
+    color: white;
+  }
+  
+  .save-btn:hover {
+    background-color: #0d5ebd;
+  }
+  
+  .cancel-btn {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .cookie-content, .cookie-settings {
+      padding: 15px;
+    }
+    
+    .cookie-buttons {
+      flex-direction: column;
+    }
+    
+    .cookie-btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+<!-- Add this JavaScript to handle the cookie consent functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  
+    // Check initial consent state
+    if (!localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookie-consent').style.display = 'block';
+    } else {
+      applyConsent(); // Apply previously stored consent
+    }
+  
+    // Accept all cookies
+    document.getElementById('accept-all-cookies').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'all');
+      localStorage.setItem('analyticsCookies', 'true');
+      localStorage.setItem('marketingCookies', 'true');
+      document.getElementById('cookie-consent').style.display = 'none';
+      applyConsent();
+    });
+  
+    // Reject all non-essential cookies
+    document.getElementById('reject-cookies').addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'necessary');
+      localStorage.setItem('analyticsCookies', 'false');
+      localStorage.setItem('marketingCookies', 'false');
+      document.getElementById('cookie-consent').style.display = 'none';
+      applyConsent();
+    });
+  
+    // Customize cookies
+    document.getElementById('customize-cookies').addEventListener('click', function() {
+      document.getElementById('cookie-settings').style.display = 'block';
+      document.querySelector('.cookie-content').style.display = 'none';
+  
+      document.getElementById('analytics-cookies').checked = localStorage.getItem('analyticsCookies') === 'true';
+      document.getElementById('marketing-cookies').checked = localStorage.getItem('marketingCookies') === 'true';
+    });
+  
+    // Save customized preferences
+    document.getElementById('save-preferences').addEventListener('click', function() {
+      const analyticsConsent = document.getElementById('analytics-cookies').checked;
+      const marketingConsent = document.getElementById('marketing-cookies').checked;
+  
+      localStorage.setItem('cookieConsent', 'custom');
+      localStorage.setItem('analyticsCookies', analyticsConsent);
+      localStorage.setItem('marketingCookies', marketingConsent);
+  
+      document.getElementById('cookie-consent').style.display = 'none';
+      applyConsent();
+    });
+  
+    // Cancel preferences
+    document.getElementById('cancel-preferences').addEventListener('click', function() {
+      document.getElementById('cookie-settings').style.display = 'none';
+      document.querySelector('.cookie-content').style.display = 'block';
+    });
+  
+    // Function to apply consent changes
+    function applyConsent() {
+      const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true';
+  
+      if (analyticsConsent) {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      } else {
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied'
+        });
+      }
+  
+      // Similarly, apply marketingCookies if using marketing trackers
+    }
+  
+  });
+</script>
 </body>
 </html>
