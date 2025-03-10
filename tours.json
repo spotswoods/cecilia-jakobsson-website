@@ -1,0 +1,32 @@
+{
+    "tours": [
+      {
+        "id": 1,
+        "title": "Capri & Amalfikusten",
+        "description": "Upplev den magnifika Amalfikusten och den förtrollande ön Capri med dess azurblåa vatten, dramatiska klippor och livliga kultur.",
+        "days": "7 dagar",
+        "price": "15.900 kr",
+        "image": "./assets/images/tours/tour-capri.jpg",
+        "link": "#"
+      },
+      {
+        "id": 2,
+        "title": "Rom - Den eviga staden",
+        "description": "Utforska historiens, konstens och kulinarikens stad med en personlig guide som visar både kända landmärken och dolda skatter.",
+        "days": "5 dagar",
+        "price": "12.500 kr",
+        "image": "./assets/images/tours/tour-rom.jpg",
+        "link": "#"
+      },
+      {
+        "id": 3,
+        "title": "Barga - Toscanas juvel",
+        "description": "Upptäck den charmiga medeltida staden Barga i Toscana. Njut av lokal mat, vin och kultur i hjärtat av Italien.",
+        "days": "8 dagar",
+        "price": "16.400 kr",
+        "image": "./assets/images/tours/tour-barga.jpg",
+        "link": "resor.html"
+      }
+    ]
+  }
+  
