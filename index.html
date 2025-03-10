@@ -3,18 +3,52 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7XXTKR460X"></script>
   <script>
-    // Initialize dataLayer
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize dataLayer
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
     
-    // Set default consent to 'denied' for analytics
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied'
+      // Default consent is denied
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
+    
+      // Basic GA config
+      gtag('js', new Date());
+      gtag('config', 'G-S7XXTKR460X');
+    
+      // Check initial consent state immediately on load
+      applyConsent();
+  
+      // Show cookie consent banner if no preference stored
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-consent').style.display = 'block';
+      }
+  
+      document.getElementById('accept-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        localStorage.setItem('analyticsCookies', 'true');
+        document.getElementById('cookie-consent').style.display = 'none';
+        applyConsent();
+      });
+  
+      document.getElementById('reject-cookies').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        localStorage.setItem('analyticsCookies', 'false');
+        document.getElementById('cookie-consent').style.display = 'none';
+        applyConsent();
+      });
+  
+      function applyConsent() {
+        const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
+        gtag('consent', 'update', {
+          'analytics_storage': analyticsConsent
+        });
+      }
+  
+      // Call applyConsent right away in case user previously consented
+      applyConsent();
     });
-    
-    // Basic gtag configuration
-    gtag('js', new Date());
-    gtag('config', 'G-S7XXTKR460X');
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,6 +131,7 @@
       background-color: #1a76d2;
       color: white;
       padding: 8px 15px;
+      margin: 12px;
       border-radius: 4px;
       font-weight: 500;
       display: flex;
