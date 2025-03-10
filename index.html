@@ -3,53 +3,15 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7XXTKR460X"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize dataLayer
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-    
-      // Default consent is denied
-      gtag('consent', 'default', {
-        'analytics_storage': 'denied'
-      });
-    
-      // Basic GA config
-      gtag('js', new Date());
-      gtag('config', 'G-S7XXTKR460X');
-    
-      // Check initial consent state immediately on load
-      applyConsent();
-  
-      // Show cookie consent banner if no preference stored
-      if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookie-consent').style.display = 'block';
-      }
-  
-      document.getElementById('accept-cookies').addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('analyticsCookies', 'true');
-        document.getElementById('cookie-consent').style.display = 'none';
-        applyConsent();
-      });
-  
-      document.getElementById('reject-cookies').addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('analyticsCookies', 'false');
-        document.getElementById('cookie-consent').style.display = 'none';
-        applyConsent();
-      });
-  
-      function applyConsent() {
-        const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
-        gtag('consent', 'update', {
-          'analytics_storage': analyticsConsent
-        });
-      }
-  
-      // Call applyConsent right away in case user previously consented
-      applyConsent();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
     });
+    gtag('js', new Date());
+    gtag('config', 'G-S7XXTKR460X');
   </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -933,47 +895,47 @@
     </div>
   </footer>
   <!-- Cookie Consent HTML -->
-<div id="cookie-consent" class="cookie-consent">
-  <div class="cookie-content">
-    <h3>Vi använder cookies</h3>
-    <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och personanpassa innehåll. Genom att klicka på "Acceptera alla" godkänner du vår användning av cookies. Du kan också välja att anpassa dina inställningar.</p>
-    <div class="cookie-buttons">
-      <button id="accept-all-cookies" class="cookie-btn accept-btn">Acceptera alla</button>
-      <button id="customize-cookies" class="cookie-btn customize-btn">Anpassa inställningar</button>
-      <button id="reject-cookies" class="cookie-btn reject-btn">Avvisa alla</button>
+  <div id="cookie-consent" class="cookie-consent" style="display: none;">
+    <div class="cookie-content">
+      <h3>Vi använder cookies</h3>
+      <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och personanpassa innehåll. Genom att klicka på "Acceptera alla" godkänner du vår användning av cookies. Du kan också välja att anpassa dina inställningar.</p>
+      <div class="cookie-buttons">
+        <button id="accept-all-cookies" class="cookie-btn accept-btn">Acceptera alla</button>
+        <button id="customize-cookies" class="cookie-btn customize-btn">Anpassa inställningar</button>
+        <button id="reject-cookies" class="cookie-btn reject-btn">Avvisa alla</button>
+      </div>
     </div>
-  </div>
   
-  <!-- Cookie Settings Panel (Hidden by default) -->
-  <div id="cookie-settings" class="cookie-settings">
-    <h3>Cookie-inställningar</h3>
-    <div class="cookie-option">
-      <div>
-        <input type="checkbox" id="necessary-cookies" checked disabled>
-        <label for="necessary-cookies">Nödvändiga cookies</label>
+    <!-- Cookie Settings Panel (Hidden by default) -->
+    <div id="cookie-settings" class="cookie-settings" style="display: none;">
+      <h3>Cookie-inställningar</h3>
+      <div class="cookie-option">
+        <div>
+          <input type="checkbox" id="necessary-cookies" checked disabled>
+          <label for="necessary-cookies">Nödvändiga cookies</label>
+        </div>
+        <p>Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av.</p>
       </div>
-      <p>Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av.</p>
-    </div>
-    <div class="cookie-option">
-      <div>
-        <input type="checkbox" id="analytics-cookies">
-        <label for="analytics-cookies">Analys-cookies</label>
+      <div class="cookie-option">
+        <div>
+          <input type="checkbox" id="analytics-cookies">
+          <label for="analytics-cookies">Analys-cookies</label>
+        </div>
+        <p>Hjälper oss att förstå hur besökare använder webbplatsen, vilket gör att vi kan förbättra hur den fungerar.</p>
       </div>
-      <p>Hjälper oss att förstå hur besökare använder webbplatsen, vilket gör att vi kan förbättra hur den fungerar.</p>
-    </div>
-    <div class="cookie-option">
-      <div>
-        <input type="checkbox" id="marketing-cookies">
-        <label for="marketing-cookies">Marknadsförings-cookies</label>
+      <div class="cookie-option">
+        <div>
+          <input type="checkbox" id="marketing-cookies">
+          <label for="marketing-cookies">Marknadsförings-cookies</label>
+        </div>
+        <p>Används för att spåra besökare på webbplatser. Avsikten är att visa annonser som är relevanta och engagerande.</p>
       </div>
-      <p>Används för att spåra besökare på webbplatser. Avsikten är att visa annonser som är relevanta och engagerande.</p>
-    </div>
-    <div class="cookie-buttons settings-buttons">
-      <button id="save-preferences" class="cookie-btn save-btn">Spara inställningar</button>
-      <button id="cancel-preferences" class="cookie-btn cancel-btn">Avbryt</button>
+      <div class="cookie-buttons settings-buttons">
+        <button id="save-preferences" class="cookie-btn save-btn">Spara inställningar</button>
+        <button id="cancel-preferences" class="cookie-btn cancel-btn">Avbryt</button>
+      </div>
     </div>
   </div>
-</div>
 
 <!-- Add the following CSS to your stylesheet -->
 <style>
@@ -1117,78 +1079,81 @@
 <!-- Add this JavaScript to handle the cookie consent functionality -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+
+    const consentDiv = document.getElementById('cookie-consent');
+    const settingsDiv = document.getElementById('cookie-settings');
   
+    const acceptAllBtn = document.getElementById('accept-all-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+    const customizeBtn = document.getElementById('customize-cookies');
+    const saveBtn = document.getElementById('save-preferences');
+    const cancelBtn = document.getElementById('cancel-preferences');
+    
     // Check initial consent state
     if (!localStorage.getItem('cookieConsent')) {
-      document.getElementById('cookie-consent').style.display = 'block';
+      consentDiv.style.display = 'block';
     } else {
-      applyConsent(); // Apply previously stored consent
+      applyConsent();
     }
   
-    // Accept all cookies
-    document.getElementById('accept-all-cookies').addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'all');
+    const acceptAllCookiesHandler = () => {
+      localStorage.setItem('cookieConsent', 'accepted');
       localStorage.setItem('analyticsCookies', 'true');
       localStorage.setItem('marketingCookies', 'true');
-      document.getElementById('cookie-consent').style.display = 'none';
+      consentDiv.style.display = 'none';
       applyConsent();
-    });
+    };
   
-    // Reject all non-essential cookies
-    document.getElementById('reject-cookies').addEventListener('click', function() {
-      localStorage.setItem('cookieConsent', 'necessary');
+    const rejectCookies = () => {
+      localStorage.setItem('cookieConsent', 'rejected');
       localStorage.setItem('analyticsCookies', 'false');
       localStorage.setItem('marketingCookies', 'false');
-      document.getElementById('cookie-consent').style.display = 'none';
+      consentDiv.style.display = 'none';
       applyConsent();
-    });
+    };
   
-    // Customize cookies
-    document.getElementById('customize-cookies').addEventListener('click', function() {
-      document.getElementById('cookie-settings').style.display = 'block';
+    const customizeCookies = () => {
+      settingsDiv.style.display = 'block';
       document.querySelector('.cookie-content').style.display = 'none';
+    };
   
-      document.getElementById('analytics-cookies').checked = localStorage.getItem('analyticsCookies') === 'true';
-      document.getElementById('marketing-cookies').checked = localStorage.getItem('marketingCookies') === 'true';
-    });
-  
-    // Save customized preferences
-    document.getElementById('save-preferences').addEventListener('click', function() {
+    const savePreferences = () => {
       const analyticsConsent = document.getElementById('analytics-cookies').checked;
       const marketingConsent = document.getElementById('marketing-cookies').checked;
-  
+      
       localStorage.setItem('cookieConsent', 'custom');
       localStorage.setItem('analyticsCookies', analyticsConsent);
       localStorage.setItem('marketingCookies', marketingConsent);
-  
-      document.getElementById('cookie-consent').style.display = 'none';
+      
+      consentDiv.style.display = 'none';
       applyConsent();
-    });
+    };
   
-    // Cancel preferences
-    document.getElementById('cancel-preferences').addEventListener('click', function() {
-      document.getElementById('cookie-settings').style.display = 'none';
+    const cancelPreferences = () => {
+      settingsDiv.style.display = 'none';
       document.querySelector('.cookie-content').style.display = 'block';
-    });
+    };
   
-    // Function to apply consent changes
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', acceptAllCookiesHandler);
+    if (rejectBtn) rejectBtn.addEventListener('click', rejectCookies);
+    if (customizeBtn) customizeBtn.addEventListener('click', customizeCookies);
+    if (saveBtn) saveBtn.addEventListener('click', savePreferences);
+    if (cancelBtn) cancelBtn.addEventListener('click', cancelPreferences);
+  
     function applyConsent() {
-      const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true';
-  
-      if (analyticsConsent) {
+      const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
+      
+      if (typeof gtag === 'function') {
         gtag('consent', 'update', {
-          'analytics_storage': 'granted'
-        });
-      } else {
-        gtag('consent', 'update', {
-          'analytics_storage': 'denied'
+          'analytics_storage': analyticsConsent
         });
       }
-  
-      // Similarly, apply marketingCookies if using marketing trackers
     }
   
+    // Immediately apply consent if already set
+    applyConsent();
   });
 </script>
+
 </body>
 </html>
