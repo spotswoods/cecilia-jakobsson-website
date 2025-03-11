@@ -94,7 +94,7 @@
   /* Hero Section */
   .hero {
     height: 70vh;
-    background-image: url('./assets/images/hero.jpg');
+    background-image: url('../assets/images/hero.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -252,7 +252,7 @@
   .about-img {
     flex: 1;
     height: 400px;
-    background-image: url('./assets/images/cissi.jpg');
+    background-image: url('../assets/images/cissi.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 8px;
