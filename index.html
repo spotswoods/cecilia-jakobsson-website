@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta name="description" content="Upplev Italien med Cecilia Jakobsson, den sjungande reseledaren. Boka din drömresa idag.">
+  <meta name="keywords" content="Italien, Cecilia Jakobsson, sjungande reseledaren, resor, kultur, musik">
 
   <title>Cecilia Jakobsson - Den sjungande reseledaren</title>
   
@@ -60,43 +61,9 @@
       <div class="page-title">
         <h2>Kommande Resor</h2>
       </div>
-      <div class="tours-grid">
-        <div class="tour-card">
-          <div class="tour-img" style="background-image: url('./assets/images/tours/tour-capri.jpg');"></div>
-          <div class="tour-content">
-            <h3>Capri & Amalfikusten</h3>
-            <p>Upplev den magnifika Amalfikusten och den förtrollande ön Capri med dess azurblåa vatten, dramatiska klippor och livliga kultur.</p>
-            <div class="tour-meta">
-              <span>7 dagar</span>
-              <span>15.900 kr</span>
-            </div>
-            <a href="#" class="tour-btn">Läs mer</a>
-          </div>
-        </div>
-        <div class="tour-card">
-          <div class="tour-img" style="background-image: url('./assets/images/tours/tour-rom.jpg');"></div>
-          <div class="tour-content">
-            <h3>Rom - Den eviga staden</h3>
-            <p>Utforska historiens, konstens och kulinarikens stad med en personlig guide som visar dig både kända landmärken och dolda skatter.</p>
-            <div class="tour-meta">
-              <span>5 dagar</span>
-              <span>12.500 kr</span>
-            </div>
-            <a href="#" class="tour-btn">Läs mer</a>
-          </div>
-        </div>
-        <div class="tour-card">
-          <div class="tour-img" style="background-image: url('./assets/images/tours/tour-barga.jpg');"></div>
-          <div class="tour-content">
-            <h3>Barga - Toscanas juvel</h3>
-            <p>Upptäck den charmiga medeltida staden Barga i Toscana. Njut av lokal mat, vin och kultur i hjärtat av Italien.</p>
-            <div class="tour-meta">
-              <span>8 dagar</span>
-              <span>16.400 kr</span>
-            </div>
-            <a href="resor.html" class="tour-btn">Läs mer</a>
-          </div>
-        </div>
+       <!-- Empty tours container for dynamic content -->
+      <div class="tours-grid" id="tours-grid">
+        <!-- Tour cards will be injected here by JavaScript -->
       </div>
     </section>
 
@@ -237,144 +204,6 @@
     </div>
   </div>
 
-<!-- Add the following CSS to your stylesheet -->
-<style>
-  .cookie-consent {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: none; /* Will be shown with JS */
-  }
-  
-  .cookie-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .cookie-content h3 {
-    margin-top: 0;
-    color: #333;
-  }
-  
-  .cookie-content p {
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .cookie-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  
-  .cookie-btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
-  }
-  
-  .accept-btn {
-    background-color: #1a76d2;
-    color: white;
-  }
-  
-  .accept-btn:hover {
-    background-color: #0d5ebd;
-  }
-  
-  .customize-btn {
-    background-color: #f9f9f9;
-    color: #333;
-    border: 1px solid #ddd;
-  }
-  
-  .customize-btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .reject-btn {
-    background-color: #f9f9f9;
-    color: #333;
-    border: 1px solid #ddd;
-  }
-  
-  .reject-btn:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .cookie-settings {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 20px;
-    display: none; /* Hidden by default */
-  }
-  
-  .cookie-option {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .cookie-option > div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .cookie-option label {
-    margin-left: 10px;
-    font-weight: 500;
-  }
-  
-  .cookie-option p {
-    margin: 0;
-    color: #666;
-    font-size: 14px;
-  }
-  
-  .settings-buttons {
-    margin-top: 20px;
-  }
-  
-  .save-btn {
-    background-color: #1a76d2;
-    color: white;
-  }
-  
-  .save-btn:hover {
-    background-color: #0d5ebd;
-  }
-  
-  .cancel-btn {
-    background-color: #f9f9f9;
-    color: #333;
-    border: 1px solid #ddd;
-  }
-  
-  @media (max-width: 768px) {
-    .cookie-content, .cookie-settings {
-      padding: 15px;
-    }
-    
-    .cookie-buttons {
-      flex-direction: column;
-    }
-    
-    .cookie-btn {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-</style>
 
 <!-- Add this JavaScript to handle the cookie consent functionality -->
 <script>
@@ -449,10 +278,44 @@
         });
       }
     }
-  
+    
+
+    
     // Immediately apply consent if already set
     applyConsent();
   });
+  
+  fetch('tours.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const toursGrid = document.getElementById('tours-grid');
+      // Loop through each tour and build its HTML
+      data.tours.forEach(tour => {
+        const tourCard = document.createElement('div');
+        tourCard.className = 'tour-card';
+        tourCard.innerHTML = `
+          <div class="tour-img" style="background-image: url('${tour.image}');" alt="${tour.title}"></div>
+          <div class="tour-content">
+            <h3>${tour.title}</h3>
+            <p>${tour.description}</p>
+            <div class="tour-meta">
+              <span>${tour.days}</span>
+              <span>${tour.price}</span>
+            </div>
+            <a href="${tour.link}" class="tour-btn">Läs mer</a>
+          </div>
+        `;
+        toursGrid.appendChild(tourCard);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading tours:', error);
+    });
 </script>
 
 </body>

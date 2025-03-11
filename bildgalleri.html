@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bildgalleri - Cecilia Jakobsson</title>
+  <meta name="description" content="Utforska bildgalleriet med bilder från Cecilia Jakobssons tidigare resor.">
+  <meta name="keywords" content="bildgalleri, Cecilia Jakobsson, resor, bilder">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7XXTKR460"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -16,7 +18,7 @@
   </script>
   <link rel="stylesheet" href="./css/style.css">
   
-</head>
+  </head>
 <body>
   <!-- Header -->
   <header>
@@ -48,7 +50,7 @@
     <section class="gallery">
       <div class="gallery-grid">
         <!-- Example gallery item -->
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib1.jpg');"></div>
+        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib1.jpg');" alt="Bild från tidigare resa"></div>
         <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib2.jpg');"></div>
         <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib3.jpg');"></div>
         <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib4.jpg');"></div>
@@ -96,8 +98,8 @@
   </footer>
 
   <!-- Cookie Consent HTML + JS -->
-  <!-- Cookie Consent HTML -->
-  <div id="cookie-consent" class="cookie-consent" style="display: none;">
+   <!-- Cookie Consent HTML -->
+   <div id="cookie-consent" class="cookie-consent" style="display: none;">
     <div class="cookie-content">
       <h3>Vi använder cookies</h3>
       <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och personanpassa innehåll. Genom att klicka på "Acceptera alla" godkänner du vår användning av cookies. Du kan också välja att anpassa dina inställningar.</p>
@@ -139,84 +141,84 @@
     </div>
   </div>
 
-  <!-- Add this JavaScript to handle the cookie consent functionality -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+<!-- Add this JavaScript to handle the cookie consent functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
 
-      const consentDiv = document.getElementById('cookie-consent');
-      const settingsDiv = document.getElementById('cookie-settings');
+    const consentDiv = document.getElementById('cookie-consent');
+    const settingsDiv = document.getElementById('cookie-settings');
+  
+    const acceptAllBtn = document.getElementById('accept-all-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+    const customizeBtn = document.getElementById('customize-cookies');
+    const saveBtn = document.getElementById('save-preferences');
+    const cancelBtn = document.getElementById('cancel-preferences');
     
-      const acceptAllBtn = document.getElementById('accept-all-cookies');
-      const rejectBtn = document.getElementById('reject-cookies');
-      const customizeBtn = document.getElementById('customize-cookies');
-      const saveBtn = document.getElementById('save-preferences');
-      const cancelBtn = document.getElementById('cancel-preferences');
-      
-      // Check initial consent state
-      if (!localStorage.getItem('cookieConsent')) {
-        consentDiv.style.display = 'block';
-      } else {
-        applyConsent();
-      }
-    
-      const acceptAllCookiesHandler = () => {
-        localStorage.setItem('cookieConsent', 'accepted');
-        localStorage.setItem('analyticsCookies', 'true');
-        localStorage.setItem('marketingCookies', 'true');
-        consentDiv.style.display = 'none';
-        applyConsent();
-      };
-    
-      const rejectCookies = () => {
-        localStorage.setItem('cookieConsent', 'rejected');
-        localStorage.setItem('analyticsCookies', 'false');
-        localStorage.setItem('marketingCookies', 'false');
-        consentDiv.style.display = 'none';
-        applyConsent();
-      };
-    
-      const customizeCookies = () => {
-        settingsDiv.style.display = 'block';
-        document.querySelector('.cookie-content').style.display = 'none';
-      };
-    
-      const savePreferences = () => {
-        const analyticsConsent = document.getElementById('analytics-cookies').checked;
-        const marketingConsent = document.getElementById('marketing-cookies').checked;
-        
-        localStorage.setItem('cookieConsent', 'custom');
-        localStorage.setItem('analyticsCookies', analyticsConsent);
-        localStorage.setItem('marketingCookies', marketingConsent);
-        
-        consentDiv.style.display = 'none';
-        applyConsent();
-      };
-    
-      const cancelPreferences = () => {
-        settingsDiv.style.display = 'none';
-        document.querySelector('.cookie-content').style.display = 'block';
-      };
-    
-      if (acceptAllBtn) acceptAllBtn.addEventListener('click', acceptAllCookiesHandler);
-      if (rejectBtn) rejectBtn.addEventListener('click', rejectCookies);
-      if (customizeBtn) customizeBtn.addEventListener('click', customizeCookies);
-      if (saveBtn) saveBtn.addEventListener('click', savePreferences);
-      if (cancelBtn) cancelBtn.addEventListener('click', cancelPreferences);
-    
-      function applyConsent() {
-        const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
-        
-        if (typeof gtag === 'function') {
-          gtag('consent', 'update', {
-            'analytics_storage': analyticsConsent
-          });
-        }
-      }
-    
-      // Immediately apply consent if already set
+    // Check initial consent state
+    if (!localStorage.getItem('cookieConsent')) {
+      consentDiv.style.display = 'block';
+    } else {
       applyConsent();
-    });
-  </script>
+    }
+  
+    const acceptAllCookiesHandler = () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      localStorage.setItem('analyticsCookies', 'true');
+      localStorage.setItem('marketingCookies', 'true');
+      consentDiv.style.display = 'none';
+      applyConsent();
+    };
+  
+    const rejectCookies = () => {
+      localStorage.setItem('cookieConsent', 'rejected');
+      localStorage.setItem('analyticsCookies', 'false');
+      localStorage.setItem('marketingCookies', 'false');
+      consentDiv.style.display = 'none';
+      applyConsent();
+    };
+  
+    const customizeCookies = () => {
+      settingsDiv.style.display = 'block';
+      document.querySelector('.cookie-content').style.display = 'none';
+    };
+  
+    const savePreferences = () => {
+      const analyticsConsent = document.getElementById('analytics-cookies').checked;
+      const marketingConsent = document.getElementById('marketing-cookies').checked;
+      
+      localStorage.setItem('cookieConsent', 'custom');
+      localStorage.setItem('analyticsCookies', analyticsConsent);
+      localStorage.setItem('marketingCookies', marketingConsent);
+      
+      consentDiv.style.display = 'none';
+      applyConsent();
+    };
+  
+    const cancelPreferences = () => {
+      settingsDiv.style.display = 'none';
+      document.querySelector('.cookie-content').style.display = 'block';
+    };
+  
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', acceptAllCookiesHandler);
+    if (rejectBtn) rejectBtn.addEventListener('click', rejectCookies);
+    if (customizeBtn) customizeBtn.addEventListener('click', customizeCookies);
+    if (saveBtn) saveBtn.addEventListener('click', savePreferences);
+    if (cancelBtn) cancelBtn.addEventListener('click', cancelPreferences);
+  
+    function applyConsent() {
+      const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
+      
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': analyticsConsent
+        });
+      }
+    }
+  
+    // Immediately apply consent if already set
+    applyConsent();
+  });
+</script>
 
 </body>
 </html>
