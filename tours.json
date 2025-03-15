@@ -17,16 +17,8 @@
         "price": "Kontakta mig",
         "image": "./assets/images/tours/tour-rom.jpg",
         "link": "resor.html"
-      },
-      {
-        "id": 3,
-        "title": "Barga - Toscanas juvel",
-        "description": "Upptäck den charmiga medeltida staden Barga i Toscana. Njut av lokal mat, vin och kultur i hjärtat av Italien.",
-        "days": "8 dagar",
-        "price": "Kontakta mig",
-        "image": "./assets/images/tours/tour-barga.jpg",
-        "link": "resor.html"
       }
+      
     ]
   }
   
