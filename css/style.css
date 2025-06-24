@@ -821,18 +821,202 @@
     border: 1px solid #ddd;
   }
   
-  @media (max-width: 768px) {
-    .cookie-content, .cookie-settings {
-      padding: 15px;
-    }
-    
-    .cookie-buttons {
-      flex-direction: column;
-    }
-    
-    .cookie-btn {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+  .tour-detail-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  gap: 20px; /* Space between image and text */
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.tour-detail-image {
+  flex: 1 1 400px; /* Allows image to shrink but not grow beyond 400px initially */
+  max-width: 100%; /* Responsive image */
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area, might crop */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.tour-detail-content {
+  flex: 2 1 500px; /* Allows text content to take more space */
+}
+
+.tour-detail-content h3 {
+  margin-top: 0; /* Remove default top margin if image is first */
+  font-size: 1.8em;
+  color: #333; /* Or your theme color */
+}
+
+.tour-detail-content p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.tour-meta-detail {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f9f9f9; /* Light background for meta details */
+  border-left: 3px solid #007bff; /* Accent color - adjust as needed */
+}
+
+.tour-meta-detail p {
+  margin-bottom: 8px;
+}
+
+.tour-detail-book-btn {
+  display: inline-block;
+  margin-right: 15px; /* Space between buttons */
+  margin-bottom: 15px; /* Space below buttons on small screens */
+}
+
+.back-to-tours-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6c757d; /* A different color for secondary action */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-tours-btn:hover {
+  background-color: #5a6268;
+}
+
+
+@media (max-width: 768px) {
+  .cookie-content, .cookie-settings {
+    padding: 15px;
   }
   
+  .cookie-buttons {
+    flex-direction: column;
+  }
+  
+  .cookie-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+}  
+
+
+/* Tour Image Gallery / Swiper Styles */
+.tour-image-gallery {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee; /* Optional separator */
+  margin-bottom: 20px;
+}
+
+/* If you've removed the H3 ("Bilder från...") from your HTML, 
+   this rule won't apply to anything, which is fine, or you can delete it. */
+.tour-image-gallery h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tour-image-gallery .swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main image swiper - CRITICAL FOR SIZING THE LARGE IMAGE AREA */
+.tour-image-gallery .mySwiper2 { 
+  height: 65vh; /* Sets the height of the main image slider. Adjust as you like (e.g., 450px, 70vh). */
+  width: 100%;
+  margin-bottom: 10px; 
+  border-radius: 8px; 
+  background-color: #f0f0f0; /* Light background, visible if images don't fill space */
+}
+
+.tour-image-gallery .mySwiper2 .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #f0f0f0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* How images behave inside the main slider - CRITICAL FOR IMAGE SIZING */
+.tour-image-gallery .mySwiper2 .swiper-slide img {
+  display: block;
+  width: auto;  /* Allows image to scale based on its aspect ratio and the height of container */
+  height: 100%; /* Makes the image try to fill the height of the slide */
+  max-width: 100%; /* Ensures image doesn't overflow the width of the slide */
+  object-fit: contain; /* This is key: Scales the image to fit within the container while maintaining aspect ratio. 
+                           If you want it to fill and crop, use 'cover'. */
+  border-radius: 6px; 
+}
+
+.tour-image-gallery .mySwiper2 .swiper-button-next,
+.tour-image-gallery .mySwiper2 .swiper-button-prev {
+  color: #0056b3; 
+}
+.tour-image-gallery .mySwiper2 .swiper-button-next::after,
+.tour-image-gallery .mySwiper2 .swiper-button-prev::after {
+  font-size: 24px; 
+}
+
+/* Thumbnail swiper - CRITICAL FOR THUMBNAIL SIZING */
+.tour-image-gallery .mySwiper { 
+  height: 20%; 
+  max-height: 120px; /* Adjust max height of the thumbnail strip */
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.tour-image-gallery .mySwiper .swiper-slide {
+  height: 100%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  border-radius: 4px; 
+  overflow: hidden; 
+}
+
+.tour-image-gallery .mySwiper .swiper-slide:hover {
+  opacity: 0.8;
+}
+
+.tour-image-gallery .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+  border: 3px solid #0056b3; 
+  box-sizing: border-box;
+}
+
+/* How images behave inside thumbnails - CRITICAL FOR THUMBNAIL IMAGE SIZING */
+.tour-image-gallery .mySwiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures thumbnail images fill their space, cropping if necessary */
+}
+
+/* Ensure the back button has some top margin after the gallery */
+.tour-detail-content .back-to-tours-btn {
+    margin-top: 30px; 
+}
+
+/* Responsive adjustments for Swiper gallery */
+@media (max-width: 768px) {
+  .tour-image-gallery .mySwiper2 {
+    height: 50vh; 
+  }
+}
+
+@media (max-width: 480px) {
+  .tour-image-gallery .mySwiper2 {
+    height: 40vh; 
+  }
+  .tour-image-gallery .mySwiper2 .swiper-button-next::after,
+  .tour-image-gallery .mySwiper2 .swiper-button-prev::after {
+    font-size: 20px; 
+  }
+}
+/* End of Tour Image Gallery / Swiper Styles */
