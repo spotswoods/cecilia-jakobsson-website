@@ -24,7 +24,7 @@
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">Cecilia Jakobsson <span>Den sjungande reseledaren</span></div>
+        <div class="logo">Cecilia Jakobsson <span>Den personliga resan</span></div>
         <nav>
           <ul>
             <li><a href="index.html">Hem</a></li>
@@ -35,7 +35,7 @@
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
-        <a href="https://www.facebook.com/search/top?q=ceciliajakobsson.se" target="_blank" class="book-btn">
+        <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn">
           <i>f</i> Boka nu via Facebook
         </a>
       </div>
@@ -46,17 +46,68 @@
   <main class="container">
     <div class="page-title">
       <h2>Bildgalleri</h2>
+      <p>Upptäck magiska ögonblick från tidigare resor till Italien</p>
     </div>
-    <section class="gallery">
+
+    <!-- Capri Gallery Section -->
+    <section class="gallery-section">
+      <h3 class="gallery-section-title">Capri - Pärlan i Medelhavet</h3>
       <div class="gallery-grid">
-        <!-- Example gallery item -->
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib1.jpg');" alt="Bild från tidigare resa"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib2.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib3.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib4.jpg');"></div>
-        <!-- Lägg till fler bilder efter behov -->
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri1.jpg', 'Capri - Utsikt över havet')" style="background-image: url('./assets/images/tours/capri/Capri1.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri2.jpg', 'Capri - Klippformationer')" style="background-image: url('./assets/images/tours/capri/Capri2.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri3.jpg', 'Capri - Marina Grande')" style="background-image: url('./assets/images/tours/capri/Capri3.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri4.jpg', 'Capri - Gator och byggnader')" style="background-image: url('./assets/images/tours/capri/Capri4.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri5.jpg', 'Capri - Natursköna vyer')" style="background-image: url('./assets/images/tours/capri/Capri5.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri6.jpg', 'Capri - Arkitektur och natur')" style="background-image: url('./assets/images/tours/capri/Capri6.jpg');"></div>
+      </div>
+      <div class="show-more-container">
+        <button class="show-more-btn" onclick="toggleGalleryImages('capri-extra')" id="capri-toggle">Visa fler bilder från Capri</button>
+      </div>
+      <div class="gallery-grid gallery-extra" id="capri-extra" style="display: none;">
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri7.jpg', 'Capri - Panoramavy')" style="background-image: url('./assets/images/tours/capri/Capri7.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri8.jpg', 'Capri - Strandvy')" style="background-image: url('./assets/images/tours/capri/Capri8.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri9.jpg', 'Capri - Blå himmel och hav')" style="background-image: url('./assets/images/tours/capri/Capri9.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri10.jpg', 'Capri - Dramatiska klippor')" style="background-image: url('./assets/images/tours/capri/Capri10.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri11.jpg', 'Capri - Solnedgång')" style="background-image: url('./assets/images/tours/capri/Capri11.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri12.jpg', 'Capri - Kristallklart vatten')" style="background-image: url('./assets/images/tours/capri/Capri12.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/capri/Capri13.jpg', 'Capri - Traditionell arkitektur')" style="background-image: url('./assets/images/tours/capri/Capri13.jpg');"></div>
       </div>
     </section>
+
+    <!-- Rom Gallery Section -->
+    <section class="gallery-section">
+      <h3 class="gallery-section-title">Rom - Den Eviga Staden</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom1.jpg', 'Rom - Historiska monument')" style="background-image: url('./assets/images/tours/rom/rom1.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom2.jpg', 'Rom - Antika ruiner')" style="background-image: url('./assets/images/tours/rom/rom2.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom3.jpg', 'Rom - Stadsliv')" style="background-image: url('./assets/images/tours/rom/rom3.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom4.jpg', 'Rom - Arkitektoniska detaljer')" style="background-image: url('./assets/images/tours/rom/rom4.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/Via dei Coronari.jpg', 'Via dei Coronari - Charmig gata')" style="background-image: url('./assets/images/tours/rom/Via dei Coronari.jpg');"></div>
+      </div>
+    </section>
+
+    <!-- Tidigare Resor Gallery Section -->
+    <section class="gallery-section">
+      <h3 class="gallery-section-title">Minnen från Tidigare Resor</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib1.jpg', 'Tidigare resa - Kulturupplevelser')" style="background-image: url('./assets/images/prior-tours/lib1.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib2.jpg', 'Tidigare resa - Grupp tillsammans')" style="background-image: url('./assets/images/prior-tours/lib2.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib3.jpg', 'Tidigare resa - Lokala upplevelser')" style="background-image: url('./assets/images/prior-tours/lib3.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib4.jpg', 'Tidigare resa - Historiska platser')" style="background-image: url('./assets/images/prior-tours/lib4.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib5.jpg', 'Tidigare resa - Naturens skönhet')" style="background-image: url('./assets/images/prior-tours/lib5.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib6.jpg', 'Tidigare resa - Gemenskap')" style="background-image: url('./assets/images/prior-tours/lib6.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib7.jpg', 'Tidigare resa - Italiensk charm')" style="background-image: url('./assets/images/prior-tours/lib7.jpg');"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" class="lightbox-content" alt="">
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+      <button class="lightbox-prev" onclick="changeLightboxImage(-1)">❮</button>
+      <button class="lightbox-next" onclick="changeLightboxImage(1)">❯</button>
+    </div>
   </main>
 
   <!-- Footer (same as before) -->
@@ -66,9 +117,9 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>Cecilia Jakobsson</h3>
-          <p>Den sjungande reseledaren.</p>
+          <p>Genom den personliga resan får du uppleva Italien på djupet – med berättelser som väcker liv i platser, historia och människor.</p>
           <div class="social-links">
-            <a href="https://www.facebook.com/search/top?q=ceciliajakobsson.se" target="_blank"><i>f</i></a>
+            <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank"><i>f</i></a>
             <a href="https://instagram.com" target="_blank"><i>i</i></a>
           </div>
         </div>
@@ -86,7 +137,7 @@
         <div class="footer-section">
           <h3>Boka Din Resa</h3>
           <p>Boka din plats på en av mina resor!</p>
-          <a href="https://www.facebook.com/search/top?q=ceciliajakobsson.se" target="_blank" class="book-btn">
+          <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn">
             <i>f</i> Boka nu via Facebook
           </a>
         </div>
@@ -217,6 +268,83 @@
   
     // Immediately apply consent if already set
     applyConsent();
+  });
+
+  // Gallery functionality
+  let currentImageIndex = 0;
+  let currentImages = [];
+
+  function openLightbox(imgSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption;
+    lightbox.style.display = 'flex';
+    
+    // Build array of all images for navigation
+    currentImages = getAllGalleryImages();
+    currentImageIndex = currentImages.findIndex(img => img.src === imgSrc);
+    
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+  }
+
+  function changeLightboxImage(direction) {
+    currentImageIndex += direction;
+    
+    if (currentImageIndex >= currentImages.length) {
+      currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+      currentImageIndex = currentImages.length - 1;
+    }
+    
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    
+    lightboxImg.src = currentImages[currentImageIndex].src;
+    lightboxCaption.textContent = currentImages[currentImageIndex].caption;
+  }
+
+  function getAllGalleryImages() {
+    const images = [];
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const backgroundImage = item.style.backgroundImage;
+      const src = backgroundImage.slice(5, -2); // Remove 'url("' and '")'
+      const caption = item.getAttribute('onclick').match(/'([^']+)'/g)[1].slice(1, -1);
+      images.push({ src, caption });
+    });
+    return images;
+  }
+
+  function toggleGalleryImages(sectionId) {
+    const section = document.getElementById(sectionId);
+    const button = document.getElementById(sectionId.replace('-extra', '-toggle'));
+    
+    if (section.style.display === 'none') {
+      section.style.display = 'grid';
+      button.textContent = button.textContent.replace('Visa fler', 'Visa färre');
+    } else {
+      section.style.display = 'none';
+      button.textContent = button.textContent.replace('Visa färre', 'Visa fler');
+    }
+  }
+
+  // Close lightbox with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft') {
+      changeLightboxImage(-1);
+    } else if (e.key === 'ArrowRight') {
+      changeLightboxImage(1);
+    }
   });
 </script>
 
