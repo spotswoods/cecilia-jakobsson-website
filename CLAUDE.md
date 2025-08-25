@@ -23,12 +23,28 @@ This is a Swedish travel website for Cecilia "Cissi" Jakobsson, a travel guide s
 - **Image Assets**: Organized in `assets/images/` with subdirectories for different tour locations
 - **Content Language**: All content is in Swedish
 
+### JavaScript Architecture
+- **No Build System**: Pure vanilla JavaScript, no bundlers or transpilation
+- **Inline Scripts**: All JavaScript is embedded directly in HTML files using `<script>` tags
+- **Common Functionality**: Each page includes identical cookie consent and Google Analytics code
+- **Tour Loading**: Dynamic tour card generation from `tours.json` on homepage and tours page
+- **Gallery Systems**: Lightbox functionality for image galleries on tour detail pages
+- **Event Handling**: DOM manipulation using `addEventListener` and standard Web APIs
+
 ### Key Features
 - **Cookie Consent System**: Comprehensive GDPR-compliant cookie management with Google Analytics integration
 - **Facebook Integration**: Primary booking method through Facebook page links
 - **Responsive Design**: Mobile-friendly layout using CSS Grid and Flexbox
 - **Image Galleries**: Static gallery grids with background images
 - **Tour Cards**: Dynamic generation from JSON data
+
+## Development Commands
+
+Since this is a static website with no build system:
+- **Local Development**: Open HTML files directly in browser or use a simple HTTP server
+- **Testing**: Manual testing by opening pages in different browsers and devices
+- **No Build Process**: Files can be edited directly and changes are immediately visible
+- **Deployment**: Static files can be uploaded directly to web server
 
 ## Development Workflow
 
@@ -48,6 +64,12 @@ This is a Swedish travel website for Cecilia "Cissi" Jakobsson, a travel guide s
 - Uses CSS Grid for tour layouts and gallery grids
 - Color scheme: Primary blue (#1a76d2), white backgrounds, dark text (#333)
 - Responsive breakpoints implemented for mobile compatibility
+
+### Code Duplication Patterns
+- **Cookie Consent JavaScript**: Identical implementation across all HTML pages
+- **Google Analytics Setup**: Same tracking code and consent management on every page
+- **Navigation Structure**: Consistent header/nav markup duplicated in each file
+- **When making changes**: Update all pages that contain the duplicated code
 
 ### Analytics & Tracking
 - Google Analytics (G-S7XXTKR460) integrated with consent management
