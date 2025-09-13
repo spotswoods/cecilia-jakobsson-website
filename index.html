@@ -46,8 +46,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Upptäck Italien med Cecilia Cissi Jakobsson - rutinerad ciceron.</h1>
-      <p>Ta del av personliga resor till Italiens hjärta med Cecilia Jakobsson, din engagerade reseledare. Här möts kultur, musik, historia och äkta äventyr i en unik kombination.</p>
+      <h1>Upptäck Italien med Cecilia Cissi Jakobsson</h1>
+      <p>Ta del av personliga resor till Italien med Cecilia Jakobsson, passionerad Italienälskare - Med många års erfarenhet som ciceron.</p>
       <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="hero-cta">
         <i>f</i> Planera din drömresa idag – Boka via Facebook
       </a>
@@ -305,8 +305,10 @@
             <div class="tour-meta">
               <span>${tour.days}</span>
               <span>${tour.price}</span>
+              <span>Platser: ${tour.places}</span>
             </div>
             <a href="${tour.link}" class="tour-btn">Läs mer</a>
+            ${tour.urgency_text ? `<div class="urgency-text">${tour.urgency_text}</div>` : ''}
           </div>
         `;
         toursGrid.appendChild(tourCard);

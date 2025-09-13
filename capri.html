@@ -45,25 +45,12 @@
       <h2>Capri</h2>
     </div>
 
-    <div class="tour-detail-container">
-      <img src="./assets/images/tours/tour-capri.jpg" alt="Vacker vy över Capri" class="tour-detail-image">
-      <div class="tour-detail-content">
-        <p>Följ med på en oförglömlig resa till Capri, juvelen i Neapelbukten. Vi utforskar öns ikoniska sevärdheter, från de livliga gatorna i Capri stad till den fridfulla charmen i Anacapri. Besök Axel Munthes Villa San Michele, ta en båttur till den berömda Blå Grottan (väderberoende), och njut av panoramautsikter från Monte Solaro. Dagarna fylls med guidade turer, tid för egna upptäckter, utsökta italienska måltider och självklart, sång och musik. Denna resa är en perfekt blandning av kultur, natur och avkoppling i en av Italiens vackraste miljöer.</p>
-
-        <div class="tour-meta-detail">
-          <p><strong>Varaktighet:</strong> 5 nätter</p>
-          <p><strong>Pris:</strong> Kontakta mig</p>
-        </div>
-
-        <a href="https://m.me/ceciliajakobsson.se" target="_blank" class="book-btn tour-detail-book-btn">
-          <i>f</i> Boka denna resa
-        </a>
-        <a href="resor.html" class="back-to-tours-btn">Tillbaka till alla resor</a>
-      </div>
+    <div class="tour-detail-container" id="tour-detail-container">
+      <!-- Tour content will be loaded dynamically -->
     </div>
 
     <div class="tour-image-gallery">
-      <h3>Bilder från resan</h3>
+      <h3>Resebilder</h3>
       <section class="gallery-section">
         <div class="gallery-grid">
           <div class="gallery-item" onclick="openLightbox('./assets/images/tours/tour-capri.jpg', 'Capri - Överblick av ön')" style="background-image: url('./assets/images/tours/tour-capri.jpg');"></div>
@@ -275,6 +262,43 @@
     // Immediately apply consent if already set (moved to top of script)
     // applyConsent(); // Called within the initial check now
   });
+  </script>
+
+  <script>
+    // Load tour data dynamically
+    fetch('tours.json')
+      .then(response => response.json())
+      .then(data => {
+        const capriTour = data.tours.find(tour => tour.id === 1); // Capri tour has id 1
+        if (capriTour) {
+          const container = document.getElementById('tour-detail-container');
+          container.innerHTML = `
+            <img src="${capriTour.image}" alt="${capriTour.title}" class="tour-detail-image">
+            <div class="tour-detail-content">
+              <h3>Den lilla men storslagna ön</h3>
+              <p>${capriTour.long_description}</p>
+
+              <div class="tour-meta-detail">
+                <p><strong>Varaktighet:</strong> ${capriTour.days}</p>
+                <p><strong>Pris:</strong> ${capriTour.price}</p>
+                <p><strong>Platser:</strong> ${capriTour.places}</p>
+                ${capriTour.urgency_text ? `<p class="urgency-text-detail"><strong>${capriTour.urgency_text}</strong></p>` : ''}
+              </div>
+
+              <a href="https://m.me/ceciliajakobsson.se" target="_blank" class="book-btn tour-detail-book-btn">
+                <i>f</i> Boka denna resa
+              </a>
+              
+              <div class="booking-info">
+                <p><strong>Vill du veta mer?</strong> Kontakta mig via Facebook för detaljerad information om resans innehåll, exakt pris och vad som ingår. Jag svarar gärna på alla dina frågor.</p>
+              </div>
+              
+              <a href="resor.html" class="back-to-tours-btn">Tillbaka till alla resor</a>
+            </div>
+          `;
+        }
+      })
+      .catch(error => console.error('Error loading tour data:', error));
   </script>
 
   <script>

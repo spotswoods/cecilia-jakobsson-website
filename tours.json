@@ -2,23 +2,27 @@
   "tours": [
     {
       "id": 1,
-      "title": "Capri – En vandring på öns magiska stigar",
-      "short_description": "Upptäck Capris magi till fots – från färgstarka klippor till stillsamma stigar. En resa fylld av natur, kultur och reflektion, guidad i lugnt tempo.",
-      "long_description": "Följ med till den mytomspunna ön Capri. Upplev naturen, färgerna, havet, de dramatiska klipporna, Axel Munthes villa San Michele med mig som erfaren ciceron. Vi vandrar såväl turiststråken som de inte så kända stigarna. Allt för att du som resenär ska känna dofterna, höra fåglarna,uppleva det genuina ön har att erbjuda. Vi promenerar omkring i lugn och ro så att du hinner smälta alla nya intryck som denna lilla men storslagna ö bjuder på. Välkommen!",
-      "days": "5 nätter - juni 2026",
-      "price": "Kontakta mig",
-      "image": "./assets/images/tours/tour-capri.jpg",
-      "link": "capri.html"
-    },
-    {
-      "id": 2,
       "title": "Rom - Den eviga staden",
       "short_description": "Utforska Roms historiska platser till fots – från Colosseum till Trastevere. En personlig resa med plats för egna önskemål, i lugnt tempo och med mycket innehåll.",
       "long_description": "Colosseum, kejsartorgen,Pantheon, Piazza Navona  Via Coronari, Peterplatsen, Peterskyrkan, Trastevere. Alla dessa platser kommer vi att besöka och mycket mycket mer. Vi gör Rom till fots. Dagliga promenader till olika delar av staden där vi lär känna historien men även får vila i våra egna tankar och funderingar. Promenaderna sker i maklig takt. Tänk på att ha bekväma skor! Under dagarna i Rom finns utrymme för egna önskemål som jag kan hjälpa er att ordna. I resan ingår flyg, boende och frukost. Är du intresserad, kontakta mig för ytterligare upplysningar. Välkommen med din anmälan!",
       "days": "5 nätter - 18-23 april 2026",
       "price": "Kontakta mig",
+      "places": "Max 10",
+      "urgency_text": "4 platser kvar!",
       "image": "./assets/images/tours/tour-rom.jpg",
       "link": "rom.html"
+    },
+    {
+      "id": 2,
+      "title": "Capri – Den lilla men storslagna ön",
+      "short_description": "Upplev naturen, färgerna och de dramatiska klipporna tillsammans med mig som ciceron. Vi vandrar både längs turiststråken och de mer dolda stigarna, i lugn takt så du hinner ta in öns dofter, ljud och atmosfär.",
+      "long_description": "Följ med till den mytomspunna ön Capri. Upplev naturen, färgerna, havet, de dramatiska klipporna, Axel Munthes villa San Michele med mig som erfaren ciceron. Vi vandrar såväl turiststråken som de inte så kända stigarna. Allt för att du som resenär ska känna dofterna, höra fåglarna,uppleva det genuina ön har att erbjuda. Vi promenerar omkring i lugn och ro så att du hinner smälta alla nya intryck som denna lilla men storslagna ö bjuder på. Välkommen!",
+      "days": "5 nätter - juni 2026",
+      "price": "Kontakta mig",
+      "places": "Max 12",
+      "urgency_text": "1-2 platser kvar!",
+      "image": "./assets/images/tours/tour-capri.jpg",
+      "link": "capri.html"
     }
   ]
 }

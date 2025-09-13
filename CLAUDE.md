@@ -41,10 +41,11 @@ This is a Swedish travel website for Cecilia "Cissi" Jakobsson, a travel guide s
 ## Development Commands
 
 Since this is a static website with no build system:
-- **Local Development**: Open HTML files directly in browser or use a simple HTTP server
+- **Local Development**: Open HTML files directly in browser or use a simple HTTP server like `python -m http.server 8000` or `npx serve .`
 - **Testing**: Manual testing by opening pages in different browsers and devices
 - **No Build Process**: Files can be edited directly and changes are immediately visible
 - **Deployment**: Static files can be uploaded directly to web server
+- **No Package Manager**: No npm, yarn, or other dependency management - pure static files
 
 ## Development Workflow
 
@@ -54,10 +55,12 @@ Since this is a static website with no build system:
 - Keep Facebook booking links intact (`https://www.facebook.com/ceciliajakobsson.se`)
 
 ### Tour Management
-- Add new tours by editing `tours.json`
-- Tour images should be placed in `assets/images/tours/`
+- Add new tours by editing `tours.json` (currently contains 2 tours: Capri and Rome)
+- Tour card images should be placed in `assets/images/tours/` (e.g., tour-capri.jpg)
+- Tour gallery images should be placed in `assets/images/tours/[location]/`
 - Each tour requires: id, title, short_description, long_description, days, price, image, link
 - Create corresponding HTML detail pages for new tours (follow `capri.html` or `rom.html` structure)
+- Tour data is fetched dynamically on `index.html` and `resor.html` using vanilla JavaScript
 
 ### CSS Styling
 - Single stylesheet at `css/style.css` contains all styling
@@ -66,10 +69,12 @@ Since this is a static website with no build system:
 - Responsive breakpoints implemented for mobile compatibility
 
 ### Code Duplication Patterns
-- **Cookie Consent JavaScript**: Identical implementation across all HTML pages
-- **Google Analytics Setup**: Same tracking code and consent management on every page
+- **Cookie Consent JavaScript**: Identical implementation across all 8 HTML pages
+- **Google Analytics Setup**: Same tracking code (G-S7XXTKR460) and consent management on every page
 - **Navigation Structure**: Consistent header/nav markup duplicated in each file
-- **When making changes**: Update all pages that contain the duplicated code
+- **Hero Section Structure**: Similar patterns across pages with different content
+- **Footer Structure**: Repeated across all pages
+- **When making changes**: Update all pages that contain the duplicated code - no shared components or templates
 
 ### Analytics & Tracking
 - Google Analytics (G-S7XXTKR460) integrated with consent management
@@ -77,10 +82,11 @@ Since this is a static website with no build system:
 - Analytics consent updates dynamically based on user preferences
 
 ### Image Organization
-- `assets/images/tours/`: Tour-specific images for cards
-- `assets/images/tours/[location]/`: Detailed galleries for individual tours
-- `assets/images/prior-tours/`: General gallery images
-- `assets/images/`: Profile images and hero backgrounds
+- `assets/images/tours/`: Tour-specific images for cards (tour-capri.jpg, tour-rom.jpg, etc.)
+- `assets/images/tours/capri/`: Detailed gallery images for Capri tour
+- `assets/images/tours/rom/`: Detailed gallery images for Rome tour  
+- `assets/images/prior-tours/`: General gallery images from past tours
+- `assets/images/`: Profile images (cissi.jpg), hero backgrounds (hero.jpg), and historical tour photos
 
 ## Contact Information
 - Email: ceciliajakobsson_250@hotmail.com

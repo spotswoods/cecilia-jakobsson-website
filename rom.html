@@ -44,18 +44,9 @@
     <div class="page-title">
       <h2>Rom - Den eviga staden</h2>
     </div>
-    <div class="tour-detail-container">
-      <img src="./assets/images/tours/tour-rom.jpg" alt="Colosseum i Rom" class="tour-detail-image">
-      <div class="tour-detail-content">
-        <h3>Utforska historiens, konstens och kulinarikens stad</h3>
-        <p>Välkommen till Rom, en stad där varje gatsten berättar en historia. Under fem nätter upptäcker vi antikens underverk som Colosseum och Forum Romanum, Vatikanstatens storslagenhet med Peterskyrkan och Sixtinska kapellet, och barockens pärlor som Fontana di Trevi och Piazza Navona. Cecilia guidar er inte bara till de berömda monumenten utan delar även med sig av sina personliga favoriter – gömda torg, lokala trattorior och platser med den bästa glassen. Vi njuter av det italienska köket, lär oss om stadens rika historia och kultur, och upplever Roms unika atmosfär, allt ackompanjerat av sång och glädje.</p>
-        <div class="tour-meta-detail">
-          <p><strong>Antal dagar:</strong> 5 nätter</p>
-          <p><strong>Pris:</strong> Kontakta mig</p>
-        </div>
-        <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn tour-detail-book-btn">
-            <i>f</i> Boka denna resa via Facebook
-        </a>
+    <div class="tour-detail-container" id="tour-detail-container">
+      <!-- Tour content will be loaded dynamically -->
+    </div>
 
         <div class="tour-image-gallery">
           <h3>Bilder från Rom</h3>
@@ -234,6 +225,37 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+
+  // Load tour data dynamically
+  fetch('tours.json')
+    .then(response => response.json())
+    .then(data => {
+      const romTour = data.tours.find(tour => tour.id === 2); // Rome tour has id 2
+      if (romTour) {
+        const container = document.getElementById('tour-detail-container');
+        container.innerHTML = `
+          <img src="${romTour.image}" alt="${romTour.title}" class="tour-detail-image">
+          <div class="tour-detail-content">
+            <h3>Upptäck den eviga staden till fots</h3>
+            <p>${romTour.long_description}</p>
+            <div class="tour-meta-detail">
+              <p><strong>Antal dagar:</strong> ${romTour.days}</p>
+              <p><strong>Pris:</strong> ${romTour.price}</p>
+              <p><strong>Platser:</strong> ${romTour.places}</p>
+              ${romTour.urgency_text ? `<p class="urgency-text-detail"><strong>${romTour.urgency_text}</strong></p>` : ''}
+            </div>
+            <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn tour-detail-book-btn">
+                <i>f</i> Boka denna resa via Facebook
+            </a>
+            
+            <div class="booking-info">
+              <p><strong>Vill du veta mer?</strong> Kontakta mig via Facebook för detaljerad information om resans innehåll, exakt pris och vad som ingår. Jag svarar gärna på alla dina frågor.</p>
+            </div>
+          </div>
+        `;
+      }
+    })
+    .catch(error => console.error('Error loading tour data:', error));
 
   // Gallery functionality
   let currentImageIndex = 0;

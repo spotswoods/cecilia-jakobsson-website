@@ -232,8 +232,10 @@
             <div class="tour-meta">
               <span>${tour.days}</span>
               <span>${tour.price}</span>
+              <span>Platser: ${tour.places}</span>
             </div>
             <a href="${tour.link}" class="tour-btn">Läs mer</a>
+            ${tour.urgency_text ? `<div class="urgency-text">${tour.urgency_text}</div>` : ''}
           </div>
         `;
         toursGrid.appendChild(tourCard);
