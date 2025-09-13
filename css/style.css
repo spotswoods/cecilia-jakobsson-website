@@ -1,3 +1,6 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* Global Styles */
 * {
     margin: 0;
@@ -122,7 +125,15 @@
   
   .hero h1 {
     font-size: 42px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
   }
   
   .hero p {
@@ -170,6 +181,15 @@
     color: #333;
     position: relative;
     display: inline-block;
+    margin-bottom: 8px;
+  }
+
+  .page-title .subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    color: #1a76d2;
+    display: block;
+    margin-top: 5px;
   }
   
   .page-title h2::after {
@@ -273,8 +293,10 @@
   }
   
   .about-content h2 {
-    font-size: 32px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
     margin-bottom: 20px;
+    color: #1a76d2;
   }
   
   .about-content p {
@@ -316,6 +338,14 @@
     text-align: center;
     margin: 15px 0;
     box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+  }
+
+  /* Tour detail subtitle styling */
+  .tour-detail-subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #1a76d2;
+    margin-bottom: 15px;
   }
 
   /* Booking info styling */
@@ -753,6 +783,14 @@
       font-size: 16px;
       padding: 15px;
     }
+
+    .hero-subtitle {
+      font-size: 26px;
+    }
+
+    .about-content h2 {
+      font-size: 32px;
+    }
     
     .tours-grid {
       grid-template-columns: 1fr;
@@ -801,6 +839,18 @@
     .hero p {
       font-size: 14px;
       padding: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 22px;
+    }
+
+    .about-content h2 {
+      font-size: 28px;
+    }
+
+    .tour-detail-subtitle {
+      font-size: 20px;
     }
     
     .contact-details {
