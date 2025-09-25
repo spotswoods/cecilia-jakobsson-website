@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Cecilia Jakobsson - Personliga Resor till Italien | Expertguidad Ciceron</title>
+  <meta name="description" content="Upptäck Italien med erfaren ciceron Cecilia Jakobsson. Personliga smågrupper (max 12 personer) till Capri, Rom och Toscana. 15+ års erfarenhet. Boka via Facebook.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Cecilia Jakobsson">
+  <link rel="canonical" href="https://ceciliajakobsson.se/">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Cecilia Jakobsson - Personliga Resor till Italien">
+  <meta property="og:description" content="Upplev Italien med erfaren ciceron. Personliga smågrupper till Capri, Rom och Toscana. 15+ års erfarenhet.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ceciliajakobsson.se/">
+  <meta property="og:image" content="https://ceciliajakobsson.se/assets/images/hero.jpg">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Cecilia Jakobsson - Den personliga resan">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cecilia Jakobsson - Personliga Resor till Italien">
+  <meta name="twitter:description" content="Upplev Italien med erfaren ciceron. Personliga smågrupper till Capri, Rom och Toscana.">
+  <meta name="twitter:image" content="https://ceciliajakobsson.se/assets/images/hero.jpg">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" as="style">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7XXTKR460"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,24 +45,72 @@
     gtag('js', new Date());
     gtag('config', 'G-S7XXTKR460', { 'cookie_domain': 'none' });
   </script>
-  <link rel="stylesheet" href="./css/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Upplev Italien med Cecilia Jakobsson, den sjungande reseledaren. Boka din drömresa idag.">
-  <meta name="keywords" content="Italien, Cecilia Jakobsson, sjungande reseledaren, resor, kultur, musik">
 
-  <title>Cecilia Jakobsson - Den personliga resan</title>
-  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Cecilia Jakobsson - Den personliga resan",
+    "description": "Personliga resor till Italien med erfaren ciceron",
+    "url": "https://ceciliajakobsson.se",
+    "logo": "https://ceciliajakobsson.se/assets/images/cissi.jpg",
+    "image": "https://ceciliajakobsson.se/assets/images/hero.jpg",
+    "telephone": "+46 70 396 73 54",
+    "email": "ceciliajakobsson_250@hotmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SE"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ceciliajakobsson.se"
+    ],
+    "founder": {
+      "@type": "Person",
+      "name": "Cecilia Jakobsson",
+      "alternateName": "Cissi Jakobsson",
+      "jobTitle": "Reseledare och Ciceron",
+      "knowsLanguage": ["sv", "it"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Tour Guide",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "Italien"
+        }
+      }
+    },
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Sverige"
+    },
+    "areaServed": [
+      {
+        "@type": "Place",
+        "name": "Capri, Italien"
+      },
+      {
+        "@type": "Place",
+        "name": "Rom, Italien"
+      },
+      {
+        "@type": "Place",
+        "name": "Toscana, Italien"
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <!-- Header -->
-  <header>
+  <header role="banner">
     <div class="container">
       <div class="header-content">
         <div class="logo">Cecilia Jakobsson <span>Den personliga resan</span></div>
-        <nav>
+        <nav role="navigation" aria-label="Huvudnavigation">
           <ul>
-            <li><a href="index.html">Hem</a></li>
+            <li><a href="index.html" aria-current="page">Hem</a></li>
             <li><a href="resor.html">Resor</a></li>
             <li><a href="presentation.html">Presentation</a></li>
             <li><a href="foredrag.html">Föredrag</a></li>
@@ -36,34 +118,34 @@
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
-        <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn">
-          <i>f</i> Boka nu via Facebook
+        <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" rel="noopener" class="book-btn" aria-label="Boka resa via Facebook (öppnas i nytt fönster)">
+          <i aria-hidden="true">f</i> Boka nu via Facebook
         </a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" role="banner" aria-label="Huvudbanner">
     <div class="hero-content">
       <h1>Upptäck Italien med Cecilia Cissi Jakobsson</h1>
       <div class="hero-subtitle">Den personliga italienska upplevelsen</div>
       <p>Ta del av personliga resor till Italien med Cecilia Jakobsson, passionerad Italienälskare - Med många års erfarenhet som ciceron.</p>
-      <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="hero-cta">
-        <i>f</i> Planera din drömresa idag – Boka via Facebook
+      <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" rel="noopener" class="hero-cta" aria-label="Planera din drömresa - Boka via Facebook (öppnas i nytt fönster)">
+        <i aria-hidden="true">f</i> Planera din drömresa idag – Boka via Facebook
       </a>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="container">
+  <main class="container" role="main">
     <!-- Featured Tours -->
-    <section>
+    <section aria-labelledby="tours-heading">
       <div class="page-title">
-        <h2>Kommande Resor</h2>
+        <h2 id="tours-heading">Kommande Resor</h2>
       </div>
        <!-- Empty tours container for dynamic content -->
-      <div class="tours-grid" id="tours-grid">
+      <div class="tours-grid" id="tours-grid" role="region" aria-label="Lista över tillgängliga resor">
         <!-- Tour cards will be injected here by JavaScript -->
       </div>
     </section>
