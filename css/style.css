@@ -299,6 +299,33 @@
     color: #1a76d2;
   }
   
+  /* Enhanced about section styling */
+  .about-content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .about-img-main {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .about-img-inline {
+    width: 250px;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    float: right;
+    margin: 0 0 20px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
   .about-content p {
     margin-bottom: 20px;
     color: #444;
@@ -306,9 +333,40 @@
     line-height: 1.8;
     padding: 20px 25px;
     background-color: #f8f9fa;
-    border-left: 4px solid #1a76d2;
+    border: 1px solid #e0e0e0;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: justify;
+  }
+
+  .personal-touch {
+    background-color: #fff;
+    border: 2px solid #1a76d2;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .personal-touch p {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .signature {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #1a76d2;
+  }
+
+  .name-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    display: block;
+    margin-top: 8px;
   }
 
   /* Urgency text styling */
@@ -816,6 +874,25 @@
     .about-img {
       margin-bottom: 20px;
     }
+
+    .about-img-main {
+      height: 250px;
+    }
+
+    .about-img-inline {
+      float: none;
+      width: 100%;
+      height: 200px;
+      margin: 20px 0;
+    }
+
+    .personal-touch {
+      padding: 20px;
+    }
+
+    .name-signature {
+      font-size: 24px;
+    }
   }
   
   @media (max-width: 480px) {
@@ -872,6 +949,22 @@
     
     nav ul li a {
       font-size: 14px;
+    }
+
+    .about-img-main {
+      height: 200px;
+    }
+
+    .about-img-inline {
+      height: 160px;
+    }
+
+    .personal-touch {
+      padding: 15px;
+    }
+
+    .name-signature {
+      font-size: 22px;
     }
   }
   
