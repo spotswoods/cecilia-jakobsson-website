@@ -586,19 +586,30 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
-  
+
   .contact-item i {
     font-size: 36px;
     color: #1a76d2;
     margin-bottom: 15px;
   }
-  
+
   .contact-item h4 {
     margin-bottom: 10px;
     font-size: 18px;
   }
-  
+
+  .contact-item a {
+    color: #1a76d2;
+    text-decoration: none;
+  }
+
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+
   /* Footer */
   footer {
     background-color: #333;
@@ -1029,8 +1040,17 @@
       font-size: 20px;
     }
     
+    .contact-section {
+      padding: 20px 16px;
+    }
+
     .contact-details {
       flex-direction: column;
+    }
+
+    .contact-item {
+      min-width: 0;
+      width: 100%;
     }
     
     .tour-content {
