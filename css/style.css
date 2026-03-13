@@ -79,24 +79,30 @@
   }
   
   .book-btn {
-    background-color: #1a76d2;
+    background-color: #1877F2;
     color: white;
-    padding: 8px 15px;
+    padding: 9px 20px;
     margin: 12px;
-    border-radius: 4px;
-    font-weight: 500;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
+    gap: 8px;
+    white-space: nowrap;
+    transition: background-color 0.25s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(24, 119, 242, 0.35);
   }
-  
+
   .book-btn:hover {
-    background-color: #0d5ebd;
+    background-color: #1464d8;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.45);
   }
   
   .book-btn i {
-    margin-right: 8px;
+    margin-right: 0;
   }
   
   /* Hero Section */
