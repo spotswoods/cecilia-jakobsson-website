@@ -321,35 +321,32 @@
 
   .about-img-main {
     width: 100%;
-    height: 300px;
+    height: 340px;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     border-radius: 12px;
     margin-bottom: 30px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    border: 3px solid #e8f0fb;
   }
 
   .about-img-inline {
-    width: 250px;
-    height: 180px;
+    width: 240px;
+    height: 190px;
     background-size: cover;
     background-position: center;
-    border-radius: 8px;
+    border-radius: 10px;
     float: right;
-    margin: 0 0 20px 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 4px 0 20px 28px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+    border: 3px solid #e8f0fb;
   }
 
   .about-content p {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     color: #444;
-    font-size: 18px;
-    line-height: 1.8;
-    padding: 20px 25px;
-    background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 17px;
+    line-height: 1.9;
     text-align: left;
   }
 
@@ -819,7 +816,121 @@
   .booking-btn:hover {
     background-color: #0d5ebd;
   }
-  
+
+  /* ── Föredrag page ─────────────────────────────── */
+  .foredrag-intro {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background: linear-gradient(135deg, #eef4fc 0%, #f5f8ff 100%);
+    border-left: 4px solid #1a76d2;
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+  }
+
+  .foredrag-intro-icon {
+    font-size: 38px;
+    color: #1a76d2;
+    flex-shrink: 0;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .foredrag-intro-text p {
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .foredrag-intro-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .foredrag-intro-text a {
+    color: #1a76d2;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .foredrag-intro-text a:hover {
+    text-decoration: underline;
+  }
+
+  .foredrag-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 56px;
+  }
+
+  .foredrag-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .foredrag-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(26,118,210,0.14);
+  }
+
+  .foredrag-card-icon {
+    background: linear-gradient(135deg, #1a76d2, #2d8ef0);
+    color: white;
+    font-size: 32px;
+    padding: 26px 0;
+    text-align: center;
+  }
+
+  .foredrag-card-body {
+    padding: 24px 26px 28px;
+    flex: 1;
+  }
+
+  .foredrag-card-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a76d2;
+    margin-bottom: 12px;
+    line-height: 1.35;
+  }
+
+  .foredrag-card-body p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #555;
+    margin: 0;
+  }
+
+  .foredrag-cta {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    margin-bottom: 60px;
+  }
+
+  .foredrag-cta p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  .foredrag-cta .booking-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 14px 32px;
+  }
+
   .tour-sidebar {
     flex: 1;
   }
@@ -1003,8 +1114,19 @@
       font-size: 24px;
     }
 
+    /* Föredrag – single column on tablet */
+    .foredrag-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .foredrag-intro {
+      flex-direction: column;
+      gap: 16px;
+      padding: 22px 20px;
+    }
+
   }
-  
+
   @media (max-width: 480px) {
     .container {
       padding: 0 10px;
