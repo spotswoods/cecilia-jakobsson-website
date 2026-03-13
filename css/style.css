@@ -44,14 +44,19 @@
   }
   
   .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: #333;
+    line-height: 1.2;
   }
-  
+
   .logo span {
     color: #1a76d2;
     font-style: italic;
+    font-size: 13px;
+    font-weight: 400;
+    display: block;
+    letter-spacing: 0.5px;
   }
   
   nav ul {
@@ -140,7 +145,8 @@
     font-size: 18px;
     margin-bottom: 25px;
     max-width: 600px;
-    background-color: #1a76d2;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
     padding: 20px;
     border-radius: 8px;
   }
@@ -284,7 +290,7 @@
     height: 400px;
     background-image: url('../assets/images/cissi.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     border-radius: 8px;
   }
   
@@ -336,7 +342,7 @@
     border: 1px solid #e0e0e0;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    text-align: justify;
+    text-align: left;
   }
 
   .personal-touch {
@@ -887,23 +893,27 @@
     .container {
       padding: 0 15px;
     }
-    
+
     .header-content {
       flex-direction: column;
       padding: 15px 0;
     }
-    
+
     .logo {
       margin-bottom: 15px;
       font-size: 20px;
     }
-    
+
+    .header-content > .book-btn {
+      display: none;
+    }
+
     nav ul {
       margin-bottom: 15px;
       justify-content: center;
       flex-wrap: wrap;
     }
-    
+
     nav ul li {
       margin: 5px 10px;
     }
