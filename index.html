@@ -3,6 +3,7 @@
 <head>
   <!-- Essential Meta Tags -->
   <meta charset="UTF-8">
+  <script>if (window.self !== window.top) { window.top.location.replace(window.location.href); }</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
@@ -30,6 +31,7 @@
   <!-- Preload Critical Resources -->
   <link rel="preload" href="./css/style.css" as="style">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" as="style">
+  <link rel="preload" href="./assets/images/hero.jpg" as="image">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/style.css">
@@ -101,6 +103,48 @@
   }
   </script>
 
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vad ingår i resorna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mina personliga resor inkluderar expertguidning, smågrupper (max 12 personer), och djup kulturell förståelse. Kontakta mig för detaljerad information om vad som ingår i varje specifik resa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hur bokar jag en resa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Alla bokningar sker via min Facebook-sida där vi kan diskutera dina önskemål och behov. Jag förbereder varje resenär individuellt inför resan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Talar du italienska?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, jag talar italienska flytande och har över 15 års erfarenhet som ciceron i Italien. Detta gör att vi kan uppleva det äkta Italien på djupet."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Vilka resmål erbjuder du?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jag erbjuder resor till Capri, Rom, Garfagnanadalen, Lucca och andra vackra platser i Italien. Varje destination är noga utvald för sina unika kulturella och historiska värden."
+        }
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <!-- Header -->
@@ -147,6 +191,31 @@
        <!-- Empty tours container for dynamic content -->
       <div class="tours-grid" id="tours-grid" role="region" aria-label="Lista över tillgängliga resor">
         <!-- Tour cards will be injected here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" aria-labelledby="faq-heading">
+      <div class="page-title">
+        <h2 id="faq-heading">Vanliga Frågor om Italien-resor</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Vad ingår i resorna?</h3>
+          <p>Mina personliga resor inkluderar expertguidning, smågrupper (max 12 personer), och djup kulturell förståelse. Kontakta mig för detaljerad information om vad som ingår i varje specifik resa.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Hur bokar jag en resa?</h3>
+          <p>Alla bokningar sker via min Facebook-sida där vi kan diskutera dina önskemål och behov. Jag förbereder varje resenär individuellt inför resan.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Talar du italienska?</h3>
+          <p>Ja, jag talar italienska flytande och har över 15 års erfarenhet som ciceron i Italien. Detta gör att vi kan uppleva det äkta Italien på djupet.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Vilka resmål erbjuder du?</h3>
+          <p>Jag erbjuder resor till Capri, Rom, Garfagnanadalen, Lucca och andra vackra platser i Italien. Varje destination är noga utvald för sina unika kulturella och historiska värden.</p>
+        </div>
       </div>
     </section>
 
@@ -364,7 +433,7 @@
     // Immediately apply consent if already set
     applyConsent();
   });
-  
+
   fetch('tours.json')
     .then(response => {
       if (!response.ok) {

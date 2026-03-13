@@ -3,6 +3,7 @@
 <head>
   <!-- Essential Meta Tags -->
   <meta charset="UTF-8">
+  <script>if (window.self !== window.top) { window.top.location.replace(window.location.href); }</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Meta Tags -->
@@ -32,6 +33,55 @@
     gtag('js', new Date());
     gtag('config', 'G-S7XXTKR460', { 'cookie_domain': 'none' });
   </script>
+
+  <!-- Person Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cecilia Jakobsson",
+    "alternateName": "Cissi Jakobsson",
+    "jobTitle": "Italien-Ciceron och Reseledare",
+    "description": "Erfaren reseledare med 15+ års expertis inom Italien-resor. Guidebook-författare och kulturförmedlare.",
+    "image": "https://ceciliajakobsson.se/assets/images/pres/Cissi1.jpg",
+    "telephone": "+46 70 396 73 54",
+    "email": "ceciliajakobsson_250@hotmail.com",
+    "url": "https://ceciliajakobsson.se/presentation.html",
+    "sameAs": [
+      "https://www.facebook.com/ceciliajakobsson.se"
+    ],
+    "knowsLanguage": [
+      {
+        "@type": "Language",
+        "name": "Svenska",
+        "alternateName": "sv"
+      },
+      {
+        "@type": "Language",
+        "name": "Italienska",
+        "alternateName": "it"
+      }
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Tour Guide",
+      "occupationLocation": {
+        "@type": "Country",
+        "name": "Italien"
+      },
+      "experienceRequirements": "15+ års erfarenhet",
+      "skills": ["Italien-expertis", "Kulturhistoria", "Reseledning", "Föreläsning"]
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Författare av guidebok om Garfagnanadalen och Mediavalle"
+    },
+    "worksFor": {
+      "@type": "TravelAgency",
+      "name": "Cecilia Jakobsson - Den personliga resan"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -55,6 +105,16 @@
       </div>
     </div>
   </header>
+
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Du är här" class="breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="index.html">Hem</a></li>
+        <li><span class="current">Presentation</span></li>
+      </ol>
+    </div>
+  </nav>
 
   <!-- Main Content: Presentation/About information -->
   <main class="container">
