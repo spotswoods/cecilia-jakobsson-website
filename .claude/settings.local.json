@@ -8,7 +8,15 @@
       "Bash(nslookup -type=CNAME www.ceciliajakobsson.se 8.8.8.8)",
       "Bash(nslookup -type=NS ceciliajakobsson.se 8.8.8.8)",
       "WebFetch(domain:ceciliajakobsson.se)",
-      "WebFetch(domain:www.ceciliajakobsson.se)"
+      "WebFetch(domain:www.ceciliajakobsson.se)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" status)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" diff HEAD -- index.html capri.html rom.html)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" fetch origin)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" diff origin/main -- index.html)",
+      "WebFetch(domain:spotswoods.github.io)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" show origin/main --name-only)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" show origin/main:index.html)",
+      "Bash(git -C \"C:/Cissihemsida/cecilia-jakobsson-website\" pull origin main)"
     ],
     "deny": [],
     "ask": []
