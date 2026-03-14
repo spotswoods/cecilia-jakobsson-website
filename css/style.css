@@ -178,6 +178,74 @@
     margin-right: 10px;
   }
   
+  /* ── Trust Strip ──────────────────────────────── */
+  .trust-strip {
+    background: linear-gradient(135deg, #4A5628 0%, #6B7A3A 50%, #8B9A4A 100%);
+    padding: 28px 0;
+    box-shadow: 0 4px 12px rgba(74, 86, 40, 0.25);
+  }
+
+  .trust-strip-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    gap: 4px;
+  }
+
+  .trust-item > i {
+    font-size: 22px;
+    color: #C9A84C;
+    margin-bottom: 4px;
+  }
+
+  .trust-number {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .trust-label {
+    font-size: 13px;
+    opacity: 0.88;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+  }
+
+  /* ── About link button (olive, not Facebook blue) ── */
+  .about-link-btn {
+    display: inline-block;
+    background-color: #6B7A3A;
+    color: white;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 8px;
+  }
+
+  .about-link-btn:hover {
+    background-color: #4A5628;
+    transform: translateY(-2px);
+    color: white;
+  }
+
   /* Main Content */
   main {
     padding: 60px 0;
@@ -254,6 +322,7 @@
   .tour-content h3 {
     margin-bottom: 10px;
     font-size: 22px;
+    color: #4A5628;
   }
   
   .tour-content p {
@@ -291,6 +360,10 @@
     gap: 40px;
     margin-bottom: 60px;
     align-items: center;
+    background: linear-gradient(135deg, #FAFAF5 0%, #F7F9EE 100%);
+    padding: 50px 40px;
+    border-radius: 16px;
+    border: 1px solid #E4EAD0;
   }
   
   .about-img {
@@ -423,6 +496,9 @@
   /* FAQ Section */
   .faq-section {
     margin: 60px 0;
+    background: #F7F9EE;
+    padding: 50px 0;
+    border-radius: 16px;
   }
 
   .faq-grid {
@@ -434,16 +510,17 @@
 
   .faq-item {
     background: #fff;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #E4EAD0;
+    border-left: 4px solid #C9A84C;
     border-radius: 8px;
     padding: 25px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(107, 122, 58, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .faq-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(107, 122, 58, 0.15);
   }
 
   .faq-item h3 {
@@ -1080,6 +1157,22 @@
       padding: 0 15px;
     }
 
+    .trust-strip-inner {
+      gap: 16px;
+    }
+
+    .trust-item {
+      min-width: 110px;
+    }
+
+    .trust-number {
+      font-size: 20px;
+    }
+
+    .about-section {
+      padding: 30px 20px;
+    }
+
     .header-content {
       flex-direction: column;
       padding: 15px 0;
@@ -1187,7 +1280,32 @@
     .container {
       padding: 0 10px;
     }
-    
+
+    .trust-strip {
+      padding: 20px 0;
+    }
+
+    .trust-strip-inner {
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .trust-item {
+      min-width: 90px;
+    }
+
+    .trust-number {
+      font-size: 18px;
+    }
+
+    .trust-label {
+      font-size: 11px;
+    }
+
+    .about-section {
+      padding: 24px 16px;
+    }
+
     .tours-grid {
       grid-template-columns: 1fr;
       gap: 15px;
