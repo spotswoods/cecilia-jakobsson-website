@@ -58,6 +58,16 @@
     display: block;
     letter-spacing: 0.5px;
   }
+
+  .logo span::after {
+    content: '';
+    display: block;
+    width: 65%;
+    height: 1px;
+    background: linear-gradient(to right, #C9A84C, transparent);
+    margin-top: 4px;
+    opacity: 0.5;
+  }
   
   nav ul {
     display: flex;
@@ -229,11 +239,11 @@
   .page-title h2::after {
     content: '';
     position: absolute;
-    width: 60%;
-    height: 3px;
-    background-color: #6B7A3A;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #6B7A3A 25%, #C9A84C 50%, #6B7A3A 75%, transparent);
     bottom: -10px;
-    left: 20%;
+    left: 25%;
   }
   
   /* Tours Grid */
@@ -775,11 +785,53 @@
   
   .footer-bottom {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 0;
     border-top: 1px solid #444;
     color: #888;
   }
-  
+
+  .footer-bottom::before {
+    content: '✦';
+    display: block;
+    text-align: center;
+    color: #C9A84C;
+    font-size: 13px;
+    letter-spacing: 14px;
+    padding: 20px 0 14px;
+    opacity: 0.5;
+  }
+
+  /* ── Ornamental Section Dividers ───────────── */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 260px;
+  }
+
+  .ornament-divider::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #C9A84C);
+    opacity: 0.45;
+  }
+
+  .ornament-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #C9A84C);
+    opacity: 0.45;
+  }
+
+  .ornament-divider i {
+    color: #C9A84C;
+    font-size: 12px;
+    opacity: 0.6;
+  }
+
   /* Tour Page Detail */
   .tour-detail {
     display: flex;
