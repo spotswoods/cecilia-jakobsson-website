@@ -17,7 +17,7 @@
   
   a {
     text-decoration: none;
-    color: #C0622A;
+    color: #6B7A3A;
   }
   
   .container {
@@ -51,7 +51,7 @@
   }
 
   .logo span {
-    color: #C0622A;
+    color: #6B7A3A;
     font-style: italic;
     font-size: 13px;
     font-weight: 400;
@@ -75,7 +75,7 @@
   }
   
   nav ul li a:hover {
-    color: #C0622A;
+    color: #6B7A3A;
   }
   
   .book-btn {
@@ -158,7 +158,7 @@
   }
   
   .hero-cta {
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
     padding: 12px 24px;
     border-radius: 4px;
@@ -170,7 +170,7 @@
   }
   
   .hero-cta:hover {
-    background-color: #8B3A1A;
+    background-color: #4A5628;
     color: white;
   }
   
@@ -200,7 +200,7 @@
   .page-title .subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 20px;
-    color: #C0622A;
+    color: #6B7A3A;
     display: block;
     margin-top: 5px;
   }
@@ -211,7 +211,7 @@
     position: absolute;
     width: 60%;
     height: 3px;
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     bottom: -10px;
     left: 20%;
   }
@@ -274,7 +274,7 @@
   .tour-btn {
     display: block;
     text-align: center;
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
     padding: 10px;
     border-radius: 4px;
@@ -282,7 +282,7 @@
   }
   
   .tour-btn:hover {
-    background-color: #8B3A1A;
+    background-color: #4A5628;
   }
   
   /* About Section */
@@ -310,7 +310,7 @@
     font-family: 'Great Vibes', cursive;
     font-size: 38px;
     margin-bottom: 20px;
-    color: #C0622A;
+    color: #6B7A3A;
   }
   
   /* Enhanced about section styling */
@@ -327,7 +327,7 @@
     border-radius: 12px;
     margin-bottom: 30px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.18);
-    border: 3px solid #F5E6D8;
+    border: 3px solid #E4EAD0;
   }
 
   .about-img-inline {
@@ -339,7 +339,7 @@
     float: right;
     margin: 4px 0 20px 28px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.14);
-    border: 3px solid #F5E6D8;
+    border: 3px solid #E4EAD0;
   }
 
   .about-content p {
@@ -352,7 +352,7 @@
 
   .personal-touch {
     background-color: #fff;
-    border: 2px solid #C0622A;
+    border: 2px solid #6B7A3A;
     border-radius: 12px;
     padding: 25px;
     margin-top: 30px;
@@ -370,7 +370,7 @@
   .signature {
     font-size: 20px;
     margin-top: 20px;
-    color: #C0622A;
+    color: #6B7A3A;
   }
 
   .name-signature {
@@ -407,7 +407,7 @@
   }
 
   .breadcrumb a {
-    color: #C0622A;
+    color: #6B7A3A;
     text-decoration: none;
   }
 
@@ -447,7 +447,7 @@
   }
 
   .faq-item h3 {
-    color: #C0622A;
+    color: #6B7A3A;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: 600;
@@ -549,14 +549,14 @@
   .tour-detail-subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 24px;
-    color: #C0622A;
+    color: #6B7A3A;
     margin-bottom: 15px;
   }
 
   /* Booking info styling */
   .booking-info {
     background-color: #f8f9fa;
-    border-left: 4px solid #C0622A;
+    border-left: 4px solid #6B7A3A;
     padding: 15px 20px;
     margin: 20px 0;
     border-radius: 6px;
@@ -645,7 +645,7 @@
 
   .contact-item i {
     font-size: 36px;
-    color: #C0622A;
+    color: #6B7A3A;
     margin-bottom: 15px;
   }
 
@@ -655,7 +655,7 @@
   }
 
   .contact-item a {
-    color: #C0622A;
+    color: #6B7A3A;
     text-decoration: none;
   }
 
@@ -695,7 +695,7 @@
     position: absolute;
     width: 40px;
     height: 2px;
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     bottom: 0;
     left: 0;
   }
@@ -741,7 +741,7 @@
   }
   
   .social-links a:hover {
-    background-color: #C0622A;
+    background-color: #6B7A3A;
   }
   
   .footer-bottom {
@@ -784,7 +784,7 @@
   
   .tour-meta-detail i {
     margin-right: 8px;
-    color: #C0622A;
+    color: #6B7A3A;
   }
   
   .tour-banner {
@@ -829,7 +829,7 @@
     flex: 0 0 70px;
     font-size: 18px;
     font-weight: bold;
-    color: #C0622A;
+    color: #6B7A3A;
   }
   
   .itinerary-content h3 {
@@ -860,7 +860,7 @@
   
   .booking-btn {
     display: inline-block;
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
     padding: 12px 30px;
     border-radius: 4px;
@@ -870,7 +870,7 @@
   }
   
   .booking-btn:hover {
-    background-color: #8B3A1A;
+    background-color: #4A5628;
   }
 
   /* ── Föredrag page ─────────────────────────────── */
@@ -878,8 +878,8 @@
     display: flex;
     align-items: flex-start;
     gap: 24px;
-    background: linear-gradient(135deg, #FDF1E8 0%, #FEF8F3 100%);
-    border-left: 4px solid #C0622A;
+    background: linear-gradient(135deg, #F3F5E8 0%, #F7F9EE 100%);
+    border-left: 4px solid #6B7A3A;
     border-radius: 10px;
     padding: 28px 32px;
     margin-bottom: 48px;
@@ -887,7 +887,7 @@
 
   .foredrag-intro-icon {
     font-size: 38px;
-    color: #C0622A;
+    color: #6B7A3A;
     flex-shrink: 0;
     line-height: 1;
     padding-top: 2px;
@@ -905,7 +905,7 @@
   }
 
   .foredrag-intro-text a {
-    color: #C0622A;
+    color: #6B7A3A;
     font-weight: 600;
     text-decoration: none;
   }
@@ -937,7 +937,7 @@
   }
 
   .foredrag-card-icon {
-    background: linear-gradient(135deg, #C0622A, #D4733A);
+    background: linear-gradient(135deg, #6B7A3A, #C9A84C);
     color: white;
     font-size: 32px;
     padding: 26px 0;
@@ -952,7 +952,7 @@
   .foredrag-card-title {
     font-size: 19px;
     font-weight: 700;
-    color: #C0622A;
+    color: #6B7A3A;
     margin-bottom: 12px;
     line-height: 1.35;
   }
@@ -1026,7 +1026,7 @@
   }
   
   .tour-cta-sidebar {
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
     padding: 25px;
     border-radius: 8px;
@@ -1045,7 +1045,7 @@
   .tour-cta-btn {
     display: block;
     background-color: white;
-    color: #C0622A;
+    color: #6B7A3A;
     padding: 12px;
     border-radius: 4px;
     font-weight: 500;
@@ -1311,12 +1311,12 @@
   }
   
   .accept-btn {
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
   }
   
   .accept-btn:hover {
-    background-color: #8B3A1A;
+    background-color: #4A5628;
   }
   
   .customize-btn {
@@ -1374,12 +1374,12 @@
   }
   
   .save-btn {
-    background-color: #C0622A;
+    background-color: #6B7A3A;
     color: white;
   }
   
   .save-btn:hover {
-    background-color: #8B3A1A;
+    background-color: #4A5628;
   }
   
   .cancel-btn {
@@ -1637,7 +1637,7 @@ main.container {
   content: '';
   width: 60px;
   height: 3px;
-  background: #C0622A;
+  background: #6B7A3A;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -1690,7 +1690,7 @@ main.container {
 }
 
 .show-more-btn {
-  background: #C0622A;
+  background: #6B7A3A;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -1760,7 +1760,7 @@ main.container {
 }
 
 .lightbox-close:hover {
-  color: #C0622A;
+  color: #6B7A3A;
 }
 
 .lightbox-prev,
@@ -1839,3 +1839,4 @@ main.container {
     font-size: 30px;
   }
 }
+
