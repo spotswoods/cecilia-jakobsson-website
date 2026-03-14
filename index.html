@@ -44,7 +44,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied'
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
     });
     gtag('js', new Date());
     gtag('config', 'G-S7XXTKR460', { 'cookie_domain': 'none' });
@@ -326,6 +329,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Cecilia Jakobsson. Alla rättigheter förbehållna.</p>
+        <p class="cookie-settings-link"><button class="cookie-link-btn" onclick="openCookieSettings()">Cookieinställningar</button></p>
       </div>
     </div>
   </footer>
@@ -333,37 +337,30 @@
   <div id="cookie-consent" class="cookie-consent" style="display: none;">
     <div class="cookie-content">
       <h3>Vi använder cookies</h3>
-      <p>Vi använder cookies för att förbättra din upplevelse, analysera trafik och personanpassa innehåll. Genom att klicka på "Acceptera alla" godkänner du vår användning av cookies. Du kan också välja att anpassa dina inställningar.</p>
+      <p>Vi använder Google Analytics för att förstå hur besökare använder vår webbplats och förbättra innehållet. Nödvändiga cookies krävs för att sidan ska fungera. Du kan acceptera, anpassa eller avvisa analyscookies.</p>
       <div class="cookie-buttons">
         <button id="accept-all-cookies" class="cookie-btn accept-btn">Acceptera alla</button>
         <button id="customize-cookies" class="cookie-btn customize-btn">Anpassa inställningar</button>
         <button id="reject-cookies" class="cookie-btn reject-btn">Avvisa alla</button>
       </div>
     </div>
-  
+
     <!-- Cookie Settings Panel (Hidden by default) -->
     <div id="cookie-settings" class="cookie-settings" style="display: none;">
       <h3>Cookie-inställningar</h3>
       <div class="cookie-option">
         <div>
           <input type="checkbox" id="necessary-cookies" checked disabled>
-          <label for="necessary-cookies">Nödvändiga cookies</label>
+          <label for="necessary-cookies">Nödvändiga cookies (alltid aktiva)</label>
         </div>
         <p>Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av.</p>
       </div>
       <div class="cookie-option">
         <div>
           <input type="checkbox" id="analytics-cookies">
-          <label for="analytics-cookies">Analys-cookies</label>
+          <label for="analytics-cookies">Analyscookies (Google Analytics)</label>
         </div>
-        <p>Hjälper oss att förstå hur besökare använder webbplatsen, vilket gör att vi kan förbättra hur den fungerar.</p>
-      </div>
-      <div class="cookie-option">
-        <div>
-          <input type="checkbox" id="marketing-cookies">
-          <label for="marketing-cookies">Marknadsförings-cookies</label>
-        </div>
-        <p>Används för att spåra besökare på webbplatser. Avsikten är att visa annonser som är relevanta och engagerande.</p>
+        <p>Hjälper oss förstå hur besökare använder webbplatsen (t.ex. vilka sidor som besöks). Informationen är anonym och används enbart för att förbättra webbplatsen.</p>
       </div>
       <div class="cookie-buttons settings-buttons">
         <button id="save-preferences" class="cookie-btn save-btn">Spara inställningar</button>
@@ -373,83 +370,93 @@
   </div>
 
 
-<!-- Add this JavaScript to handle the cookie consent functionality -->
+<!-- Cookie Consent JavaScript -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-
     const consentDiv = document.getElementById('cookie-consent');
     const settingsDiv = document.getElementById('cookie-settings');
-  
     const acceptAllBtn = document.getElementById('accept-all-cookies');
     const rejectBtn = document.getElementById('reject-cookies');
     const customizeBtn = document.getElementById('customize-cookies');
     const saveBtn = document.getElementById('save-preferences');
     const cancelBtn = document.getElementById('cancel-preferences');
-    
-    // Check initial consent state
-    if (!localStorage.getItem('cookieConsent')) {
+
+    const CONSENT_EXPIRY_MS = 365 * 24 * 60 * 60 * 1000; // 12 months
+
+    function isConsentExpired() {
+      const ts = localStorage.getItem('cookieConsentTimestamp');
+      return !ts || (Date.now() - parseInt(ts)) > CONSENT_EXPIRY_MS;
+    }
+
+    function saveTimestamp() {
+      localStorage.setItem('cookieConsentTimestamp', Date.now().toString());
+    }
+
+    function applyConsent() {
+      const granted = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', {
+          'analytics_storage': granted,
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        });
+      }
+    }
+
+    // Show banner if no consent or consent has expired
+    if (!localStorage.getItem('cookieConsent') || isConsentExpired()) {
       consentDiv.style.display = 'block';
     } else {
       applyConsent();
     }
-  
-    const acceptAllCookiesHandler = () => {
+
+    // Allow re-opening settings from footer link
+    window.openCookieSettings = function() {
+      const analyticsEl = document.getElementById('analytics-cookies');
+      if (analyticsEl) analyticsEl.checked = localStorage.getItem('analyticsCookies') === 'true';
+      document.querySelector('.cookie-content').style.display = 'none';
+      settingsDiv.style.display = 'block';
+      consentDiv.style.display = 'block';
+    };
+
+    if (acceptAllBtn) acceptAllBtn.addEventListener('click', function() {
       localStorage.setItem('cookieConsent', 'accepted');
       localStorage.setItem('analyticsCookies', 'true');
-      localStorage.setItem('marketingCookies', 'true');
+      saveTimestamp();
       consentDiv.style.display = 'none';
       applyConsent();
-    };
-  
-    const rejectCookies = () => {
+    });
+
+    if (rejectBtn) rejectBtn.addEventListener('click', function() {
       localStorage.setItem('cookieConsent', 'rejected');
       localStorage.setItem('analyticsCookies', 'false');
-      localStorage.setItem('marketingCookies', 'false');
+      saveTimestamp();
       consentDiv.style.display = 'none';
       applyConsent();
-    };
-  
-    const customizeCookies = () => {
+    });
+
+    if (customizeBtn) customizeBtn.addEventListener('click', function() {
+      const analyticsEl = document.getElementById('analytics-cookies');
+      if (analyticsEl) analyticsEl.checked = localStorage.getItem('analyticsCookies') === 'true';
       settingsDiv.style.display = 'block';
       document.querySelector('.cookie-content').style.display = 'none';
-    };
-  
-    const savePreferences = () => {
+    });
+
+    if (saveBtn) saveBtn.addEventListener('click', function() {
       const analyticsConsent = document.getElementById('analytics-cookies').checked;
-      const marketingConsent = document.getElementById('marketing-cookies').checked;
-      
       localStorage.setItem('cookieConsent', 'custom');
       localStorage.setItem('analyticsCookies', analyticsConsent);
-      localStorage.setItem('marketingCookies', marketingConsent);
-      
+      saveTimestamp();
       consentDiv.style.display = 'none';
       applyConsent();
-    };
-  
-    const cancelPreferences = () => {
+    });
+
+    if (cancelBtn) cancelBtn.addEventListener('click', function() {
       settingsDiv.style.display = 'none';
       document.querySelector('.cookie-content').style.display = 'block';
-    };
-  
-    if (acceptAllBtn) acceptAllBtn.addEventListener('click', acceptAllCookiesHandler);
-    if (rejectBtn) rejectBtn.addEventListener('click', rejectCookies);
-    if (customizeBtn) customizeBtn.addEventListener('click', customizeCookies);
-    if (saveBtn) saveBtn.addEventListener('click', savePreferences);
-    if (cancelBtn) cancelBtn.addEventListener('click', cancelPreferences);
-  
-    function applyConsent() {
-      const analyticsConsent = localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied';
-      
-      if (typeof gtag === 'function') {
-        gtag('consent', 'update', {
-          'analytics_storage': analyticsConsent
-        });
-      }
-    }
-    
+    });
 
-    
-    // Immediately apply consent if already set
     applyConsent();
   });
 
