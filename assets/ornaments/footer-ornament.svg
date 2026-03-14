@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 22" width="90" height="22">
+  <g fill="#C9A84C">
+
+    <!-- Thin connecting lines -->
+    <rect x="0"  y="11" width="26" height="0.5" opacity="0.3"/>
+    <rect x="64" y="11" width="26" height="0.5" opacity="0.3"/>
+
+    <!-- Left leaf pair -->
+    <ellipse cx="15" cy="7.5"  rx="7.5" ry="2.6" transform="rotate(-26 15 7.5)"  opacity="0.52"/>
+    <ellipse cx="15" cy="14.5" rx="7.5" ry="2.6" transform="rotate(26 15 14.5)"  opacity="0.52"/>
+
+    <!-- Left dot -->
+    <circle cx="29" cy="11" r="1.1" opacity="0.32"/>
+
+    <!-- Central diamond ornament -->
+    <path d="M45,3 L50.5,11 L45,19 L39.5,11 Z" opacity="0.58"/>
+    <!-- Inner petal cross -->
+    <ellipse cx="45" cy="11" rx="2.2" ry="5.5" opacity="0.5"/>
+    <ellipse cx="45" cy="11" rx="5.5" ry="2.2" opacity="0.5"/>
+    <!-- Centre dot -->
+    <circle cx="45" cy="11" r="2.2" opacity="0.75"/>
+    <circle cx="45" cy="11" r="0.9" fill="white" opacity="0.55"/>
+
+    <!-- Right dot -->
+    <circle cx="61" cy="11" r="1.1" opacity="0.32"/>
+
+    <!-- Right leaf pair (mirror) -->
+    <ellipse cx="75" cy="7.5"  rx="7.5" ry="2.6" transform="rotate(26 75 7.5)"   opacity="0.52"/>
+    <ellipse cx="75" cy="14.5" rx="7.5" ry="2.6" transform="rotate(-26 75 14.5)" opacity="0.52"/>
+
+  </g>
+</svg>
