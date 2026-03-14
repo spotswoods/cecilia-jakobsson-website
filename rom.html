@@ -75,10 +75,24 @@
       'analytics_storage': 'denied',
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
     });
     gtag('js', new Date());
-    gtag('config', 'G-S7XXTKR460', { 'cookie_domain': 'none' });
+    gtag('config', 'G-S7XXTKR460');
+    // Apply stored consent immediately within the wait_for_update window
+    (function() {
+      try {
+        var exp = 365 * 24 * 60 * 60 * 1000;
+        var ts = localStorage.getItem('cookieConsentTimestamp');
+        if (localStorage.getItem('cookieConsent') && ts && (Date.now() - parseInt(ts)) <= exp) {
+          gtag('consent', 'update', {
+            'analytics_storage': localStorage.getItem('analyticsCookies') === 'true' ? 'granted' : 'denied',
+            'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'
+          });
+        }
+      } catch(e) {}
+    })();
   </script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
