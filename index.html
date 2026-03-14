@@ -237,15 +237,24 @@
         <h2>Bildgalleri</h2>
       </div>
       <div class="gallery-grid">
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib1.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib2.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib3.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib4.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib5.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib6.jpg');"></div>
-        <div class="gallery-item" style="background-image: url('./assets/images/prior-tours/lib7.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib1.jpg', 'Tidigare resa - Kulturupplevelser')" style="background-image: url('./assets/images/prior-tours/lib1.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib2.jpg', 'Tidigare resa - Grupp tillsammans')" style="background-image: url('./assets/images/prior-tours/lib2.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib3.jpg', 'Tidigare resa - Lokala upplevelser')" style="background-image: url('./assets/images/prior-tours/lib3.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib4.jpg', 'Tidigare resa - Historiska platser')" style="background-image: url('./assets/images/prior-tours/lib4.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib5.jpg', 'Tidigare resa - Naturens skönhet')" style="background-image: url('./assets/images/prior-tours/lib5.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib6.jpg', 'Tidigare resa - Gemenskap')" style="background-image: url('./assets/images/prior-tours/lib6.jpg');"></div>
+        <div class="gallery-item" onclick="openLightbox('./assets/images/prior-tours/lib7.jpg', 'Tidigare resa - Italiensk charm')" style="background-image: url('./assets/images/prior-tours/lib7.jpg');"></div>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" class="lightbox-content" alt="" onclick="event.stopPropagation()">
+      <div id="lightbox-caption" class="lightbox-caption" onclick="event.stopPropagation()"></div>
+      <button class="lightbox-prev" onclick="event.stopPropagation(); changeLightboxImage(-1)">❮</button>
+      <button class="lightbox-next" onclick="event.stopPropagation(); changeLightboxImage(1)">❯</button>
+    </div>
 
     <!-- Contact Section -->
     <section id="kontakt" class="contact-section">
@@ -473,6 +482,53 @@
     .catch(error => {
       console.error('Error loading tours:', error);
     });
+</script>
+
+<script>
+  // Lightbox functionality
+  let currentImageIndex = 0;
+  let currentImages = [];
+
+  function openLightbox(imgSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption;
+    lightbox.style.display = 'flex';
+    currentImages = getAllGalleryImages();
+    currentImageIndex = currentImages.findIndex(img => img.src === imgSrc);
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  function changeLightboxImage(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex >= currentImages.length) currentImageIndex = 0;
+    else if (currentImageIndex < 0) currentImageIndex = currentImages.length - 1;
+    document.getElementById('lightbox-img').src = currentImages[currentImageIndex].src;
+    document.getElementById('lightbox-caption').textContent = currentImages[currentImageIndex].caption;
+  }
+
+  function getAllGalleryImages() {
+    const images = [];
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const src = item.style.backgroundImage.slice(5, -2);
+      const caption = item.getAttribute('onclick').match(/'([^']+)'/g)[1].slice(1, -1);
+      images.push({ src, caption });
+    });
+    return images;
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+    else if (e.key === 'ArrowRight') changeLightboxImage(1);
+  });
 </script>
 
 </body>
