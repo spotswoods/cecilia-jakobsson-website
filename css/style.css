@@ -783,7 +783,7 @@
   .footer-bottom::before {
     content: '';
     display: block;
-    height: 22px;
+    height: 30px;
     width: 90px;
     margin: 18px auto 12px;
     background: url('../assets/ornaments/footer-ornament.svg') no-repeat center;
@@ -794,12 +794,12 @@
   /* ── Ornamental Section Dividers ───────────── */
   .ornament-divider {
     text-align: center;
-    margin: 4px auto;
+    margin: 8px auto;
     line-height: 0;
   }
 
   .ornament-divider img {
-    width: 240px;
+    width: 280px;
     max-width: 90%;
     display: inline-block;
     opacity: 0.8;

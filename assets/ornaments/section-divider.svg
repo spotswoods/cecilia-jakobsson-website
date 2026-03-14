@@ -1,48 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 30" width="240" height="30">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" width="300" height="44">
+  <g fill="none" stroke="#C9A84C" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- LEFT: main sweeping curve with end scroll -->
+    <path stroke-width="1.5"
+      d="M 143,22
+         C 120,19 88,12 62,14
+         C 44,15 30,19 24,24
+         C 16,28 15,34 20,37
+         C 25,40 32,38 33,33
+         C 34,28 30,26 26,26"/>
+
+    <!-- LEFT: inner secondary curve (shorter, no scroll) -->
+    <path stroke-width="0.9" opacity="0.55"
+      d="M 141,22
+         C 116,21 90,18 70,18
+         C 56,18 46,21 42,24"/>
+
+    <!-- RIGHT: main sweeping curve with end scroll (mirror) -->
+    <path stroke-width="1.5"
+      d="M 157,22
+         C 180,19 212,12 238,14
+         C 256,15 270,19 276,24
+         C 284,28 285,34 280,37
+         C 275,40 268,38 267,33
+         C 266,28 270,26 274,26"/>
+
+    <!-- RIGHT: inner secondary curve (mirror) -->
+    <path stroke-width="0.9" opacity="0.55"
+      d="M 159,22
+         C 184,21 210,18 230,18
+         C 244,18 254,21 258,24"/>
+
+  </g>
+
+  <!-- CENTRAL ORNAMENT -->
   <g fill="#C9A84C">
-
-    <!-- Thin connecting lines -->
-    <rect x="0" y="14.5" width="80" height="0.5" opacity="0.3"/>
-    <rect x="160" y="14.5" width="80" height="0.5" opacity="0.3"/>
-
-    <!-- Left outer leaf pair -->
-    <ellipse cx="24" cy="10.5" rx="9.5" ry="3.2" transform="rotate(-22 24 10.5)" opacity="0.52"/>
-    <ellipse cx="24" cy="18.5" rx="9.5" ry="3.2" transform="rotate(22 24 18.5)" opacity="0.52"/>
-
-    <!-- Left inner leaf pair -->
-    <ellipse cx="54" cy="11.2" rx="8" ry="2.7" transform="rotate(-18 54 11.2)" opacity="0.46"/>
-    <ellipse cx="54" cy="17.8" rx="8" ry="2.7" transform="rotate(18 54 17.8)" opacity="0.46"/>
-
-    <!-- Left stem dots -->
-    <circle cx="8"  cy="14.5" r="1.3" opacity="0.32"/>
-    <circle cx="68" cy="14.5" r="1.3" opacity="0.32"/>
-
-    <!-- Central 8-petal rosette -->
-    <!-- Cardinal petals -->
-    <ellipse cx="120" cy="7.5"  rx="2.8" ry="6"   opacity="0.55"/>
-    <ellipse cx="120" cy="21.5" rx="2.8" ry="6"   opacity="0.55"/>
-    <ellipse cx="112" cy="14.5" rx="6"   ry="2.8"  opacity="0.55"/>
-    <ellipse cx="128" cy="14.5" rx="6"   ry="2.8"  opacity="0.55"/>
-    <!-- Diagonal petals -->
-    <ellipse cx="114" cy="8.5"  rx="2.2" ry="4.8" transform="rotate(-45 114 8.5)"  opacity="0.4"/>
-    <ellipse cx="126" cy="8.5"  rx="2.2" ry="4.8" transform="rotate(45 126 8.5)"   opacity="0.4"/>
-    <ellipse cx="114" cy="20.5" rx="2.2" ry="4.8" transform="rotate(45 114 20.5)"  opacity="0.4"/>
-    <ellipse cx="126" cy="20.5" rx="2.2" ry="4.8" transform="rotate(-45 126 20.5)" opacity="0.4"/>
-    <!-- Centre -->
-    <circle cx="120" cy="14.5" r="3.6" opacity="0.72"/>
-    <circle cx="120" cy="14.5" r="1.4" fill="white" opacity="0.55"/>
-
-    <!-- Right inner leaf pair (mirror) -->
-    <ellipse cx="186" cy="11.2" rx="8"   ry="2.7" transform="rotate(18 186 11.2)"  opacity="0.46"/>
-    <ellipse cx="186" cy="17.8" rx="8"   ry="2.7" transform="rotate(-18 186 17.8)" opacity="0.46"/>
-
-    <!-- Right outer leaf pair (mirror) -->
-    <ellipse cx="216" cy="10.5" rx="9.5" ry="3.2" transform="rotate(22 216 10.5)"  opacity="0.52"/>
-    <ellipse cx="216" cy="18.5" rx="9.5" ry="3.2" transform="rotate(-22 216 18.5)" opacity="0.52"/>
-
-    <!-- Right stem dots -->
-    <circle cx="172" cy="14.5" r="1.3" opacity="0.32"/>
-    <circle cx="232" cy="14.5" r="1.3" opacity="0.32"/>
-
+    <!-- Upward flame / teardrop -->
+    <path d="M 150,8 C 153.5,9.5 154.5,14 150,17 C 145.5,14 146.5,9.5 150,8 Z"/>
+    <!-- Diamond connector -->
+    <path d="M 150,17 L 153,21 L 150,25 L 147,21 Z" opacity="0.9"/>
+    <!-- Lower teardrop -->
+    <path d="M 150,25 C 152.5,26.5 153,30 150,32 C 147,30 147.5,26.5 150,25 Z" opacity="0.85"/>
+    <!-- Side accent dots -->
+    <circle cx="143" cy="22" r="1.1" opacity="0.55"/>
+    <circle cx="157" cy="22" r="1.1" opacity="0.55"/>
   </g>
 </svg>
