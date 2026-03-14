@@ -1,40 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 30" width="90" height="30">
   <g fill="none" stroke="#C9A84C" stroke-linecap="round" stroke-linejoin="round">
 
-    <!-- LEFT: main curve with end scroll -->
+    <!-- LEFT: main upper curve (sweeps high, scroll at end) -->
     <path stroke-width="1.2"
       d="M 41,14
-         C 28,11 16,8 9,11
-         C 4,13 2,18 3,23
-         C 4,27 9,28 12,25
-         C 15,22 13,19 10,18"/>
+         C 28,9 16,5 9,7
+         C 4,9 2,14 4,19
+         C 5,23 10,23 12,20
+         C 14,18 12,16 9,16"/>
 
-    <!-- LEFT: inner accent curve -->
-    <path stroke-width="0.7" opacity="0.5"
-      d="M 40,14
-         C 27,13 17,12 11,13
-         C 8,14 6,16 6,18"/>
+    <!-- LEFT: counter lower arc (dips below, converges at scroll) -->
+    <path stroke-width="0.8" opacity="0.7"
+      d="M 40,17
+         C 27,21 17,25 11,24
+         C 8,23 7,21 9,16"/>
 
-    <!-- RIGHT: main curve with end scroll (mirror) -->
+    <!-- RIGHT: main upper curve (mirror) -->
     <path stroke-width="1.2"
       d="M 49,14
-         C 62,11 74,8 81,11
-         C 86,13 88,18 87,23
-         C 86,27 81,28 78,25
-         C 75,22 77,19 80,18"/>
+         C 62,9 74,5 81,7
+         C 86,9 88,14 86,19
+         C 85,23 80,23 78,20
+         C 76,18 78,16 81,16"/>
 
-    <!-- RIGHT: inner accent curve (mirror) -->
-    <path stroke-width="0.7" opacity="0.5"
-      d="M 50,14
-         C 63,13 73,12 79,13
-         C 82,14 84,16 84,18"/>
+    <!-- RIGHT: counter lower arc (mirror) -->
+    <path stroke-width="0.8" opacity="0.7"
+      d="M 50,17
+         C 63,21 73,25 79,24
+         C 82,23 83,21 81,16"/>
 
   </g>
 
   <!-- CENTRAL ORNAMENT -->
   <g fill="#C9A84C">
-    <!-- Upward flame -->
-    <path d="M 45,6 C 47.5,7 48,10 45,12 C 42,10 42.5,7 45,6 Z"/>
+    <!-- Upper flame -->
+    <path d="M 45,6 C 47.5,7 48.5,10.5 45,12.5 C 41.5,10.5 42.5,7 45,6 Z"/>
     <!-- Diamond -->
     <path d="M 45,12 L 47.5,15.5 L 45,19 L 42.5,15.5 Z" opacity="0.85"/>
     <!-- Lower dot -->

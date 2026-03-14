@@ -1,48 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 44" width="300" height="44">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50" width="300" height="50">
   <g fill="none" stroke="#C9A84C" stroke-linecap="round" stroke-linejoin="round">
 
-    <!-- LEFT: main sweeping curve with end scroll -->
-    <path stroke-width="1.5"
+    <!--
+      Counter-curve baroque style:
+      LEFT side — main upper curve arches HIGH, lower arc dips LOW,
+      both converge at the scroll terminal, creating a tapered-band effect.
+    -->
+
+    <!-- LEFT: main upper curve (sweeps high, ends in downward scroll) -->
+    <path stroke-width="1.6"
       d="M 143,22
-         C 120,19 88,12 62,14
-         C 44,15 30,19 24,24
-         C 16,28 15,34 20,37
-         C 25,40 32,38 33,33
-         C 34,28 30,26 26,26"/>
+         C 115,12 80,5 52,7
+         C 33,9 18,16 14,23
+         C 11,30 15,36 22,37
+         C 29,38 32,32 28,28"/>
 
-    <!-- LEFT: inner secondary curve (shorter, no scroll) -->
-    <path stroke-width="0.9" opacity="0.55"
-      d="M 141,22
-         C 116,21 90,18 70,18
-         C 56,18 46,21 42,24"/>
+    <!-- LEFT: counter lower arc (dips below centre, converges at scroll) -->
+    <path stroke-width="1.0" opacity="0.72"
+      d="M 141,26
+         C 114,31 84,39 58,38
+         C 44,37 34,33 28,28"/>
 
-    <!-- RIGHT: main sweeping curve with end scroll (mirror) -->
-    <path stroke-width="1.5"
+    <!-- RIGHT: main upper curve (mirror) -->
+    <path stroke-width="1.6"
       d="M 157,22
-         C 180,19 212,12 238,14
-         C 256,15 270,19 276,24
-         C 284,28 285,34 280,37
-         C 275,40 268,38 267,33
-         C 266,28 270,26 274,26"/>
+         C 185,12 220,5 248,7
+         C 267,9 282,16 286,23
+         C 289,30 285,36 278,37
+         C 271,38 268,32 272,28"/>
 
-    <!-- RIGHT: inner secondary curve (mirror) -->
-    <path stroke-width="0.9" opacity="0.55"
-      d="M 159,22
-         C 184,21 210,18 230,18
-         C 244,18 254,21 258,24"/>
+    <!-- RIGHT: counter lower arc (mirror) -->
+    <path stroke-width="1.0" opacity="0.72"
+      d="M 159,26
+         C 186,31 216,39 242,38
+         C 256,37 266,33 272,28"/>
 
   </g>
 
-  <!-- CENTRAL ORNAMENT -->
+  <!-- CENTRAL ORNAMENT — taller to span both curves -->
   <g fill="#C9A84C">
-    <!-- Upward flame / teardrop -->
-    <path d="M 150,8 C 153.5,9.5 154.5,14 150,17 C 145.5,14 146.5,9.5 150,8 Z"/>
+    <!-- Upper flame -->
+    <path d="M 150,7 C 153.5,8.5 155,13 150,17 C 145,13 146.5,8.5 150,7 Z"/>
     <!-- Diamond connector -->
-    <path d="M 150,17 L 153,21 L 150,25 L 147,21 Z" opacity="0.9"/>
+    <path d="M 150,17 L 154,22 L 150,27 L 146,22 Z" opacity="0.9"/>
     <!-- Lower teardrop -->
-    <path d="M 150,25 C 152.5,26.5 153,30 150,32 C 147,30 147.5,26.5 150,25 Z" opacity="0.85"/>
-    <!-- Side accent dots -->
-    <circle cx="143" cy="22" r="1.1" opacity="0.55"/>
-    <circle cx="157" cy="22" r="1.1" opacity="0.55"/>
+    <path d="M 150,27 C 152.5,28.5 153,33 150,36 C 147,33 147.5,28.5 150,27 Z" opacity="0.85"/>
+    <!-- Side accent dots at curve start points -->
+    <circle cx="142" cy="23" r="1.2" opacity="0.55"/>
+    <circle cx="158" cy="23" r="1.2" opacity="0.55"/>
   </g>
 </svg>
