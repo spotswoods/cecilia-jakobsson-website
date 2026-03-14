@@ -8,7 +8,8 @@
       "days": "5 nätter - 18-23 april 2026",
       "price": "Kontakta mig",
       "places": "Max 10",
-      "urgency_text": "4 platser kvar!",
+      "sold_out": true,
+      "urgency_text": "Fullbokad",
       "image": "./assets/images/tours/tour-rom.jpg",
       "link": "rom.html"
     },
@@ -20,7 +21,8 @@
       "days": "5 nätter - juni 2026",
       "price": "Kontakta mig",
       "places": "Max 12",
-      "urgency_text": "1-2 platser kvar!",
+      "sold_out": true,
+      "urgency_text": "Fullbokad",
       "image": "./assets/images/tours/tour-capri.jpg",
       "link": "capri.html"
     }

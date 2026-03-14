@@ -449,8 +449,12 @@
       data.tours.forEach(tour => {
         const tourCard = document.createElement('div');
         tourCard.className = 'tour-card';
+        const soldOut = tour.sold_out === true;
         tourCard.innerHTML = `
-          <div class="tour-img" style="background-image: url('${tour.image}');" alt="${tour.title}"></div>
+          <div class="tour-img-wrapper">
+            <div class="tour-img" style="background-image: url('${tour.image}');" alt="${tour.title}"></div>
+            ${soldOut ? `<div class="sold-out-ribbon">Fullbokad</div>` : ''}
+          </div>
           <div class="tour-content">
             <h3>${tour.title}</h3>
             <p>${tour.short_description}</p>
@@ -459,7 +463,7 @@
               <span>${tour.price}</span>
               <span>Platser: ${tour.places}</span>
             </div>
-            <a href="${tour.link}" class="tour-btn">Läs mer</a>
+            <a href="${tour.link}" class="${soldOut ? 'tour-btn-soldout' : 'tour-btn'}">Läs mer</a>
             ${tour.urgency_text ? `<div class="urgency-text">${tour.urgency_text}</div>` : ''}
           </div>
         `;
