@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('tours.json')
     .then(response => response.json())
     .then(data => {
-      const romTour = data.tours.find(tour => tour.id === 2); // Rome tour has id 2
+      const romTour = data.tours.find(tour => tour.id === 1); // Rome tour has id 1
       if (romTour) {
         const container = document.getElementById('tour-detail-container');
         container.innerHTML = `
