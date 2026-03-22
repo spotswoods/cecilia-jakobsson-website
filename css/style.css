@@ -273,8 +273,9 @@
   
   .tour-content h3 {
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 26px;
     color: #4A5628;
+    font-family: 'Great Vibes', cursive;
   }
   
   .tour-content p {
@@ -1298,7 +1299,7 @@
     }
     
     .tour-content h3 {
-      font-size: 18px;
+      font-size: 22px;
     }
     
     .book-btn, .tour-btn {
