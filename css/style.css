@@ -515,6 +515,35 @@
     pointer-events: none;
   }
 
+  /* Dim sold-out cards so available trips stand out */
+  .tour-card.sold-out {
+    opacity: 0.65;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .tour-card.sold-out:hover {
+    transform: none;
+    opacity: 0.75;
+  }
+  .tour-card.sold-out .tour-img {
+    filter: grayscale(25%);
+  }
+
+  /* Special badge (e.g. "Unik resa") on card image */
+  .tour-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #c0623a;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    pointer-events: none;
+  }
+
   /* Sold-out button style */
   .tour-btn-soldout {
     display: block;
