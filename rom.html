@@ -137,8 +137,14 @@
               <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom2.jpg', 'Rom - Marknadens konstnärliga keramik')" style="background-image: url('./assets/images/tours/rom/rom2.jpg');"></div>
               <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom3.jpg', 'Rom - Castel Saint-Angelo')" style="background-image: url('./assets/images/tours/rom/rom3.jpg');"></div>
               <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom4.jpg', 'Rom - Fontana del Facchino')" style="background-image: url('./assets/images/tours/rom/rom4.jpg');"></div>
-              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/Via dei Coronari.jpg', 'Via dei Coronari - Charmig gata')" style="background-image: url('./assets/images/tours/rom/Via dei Coronari.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/via-dei-coronari.jpg', 'Via dei Coronari - Charmig gata')" style="background-image: url('./assets/images/tours/rom/via-dei-coronari.jpg');"></div>
               <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/rom5.jpg', 'Rom - Colosseum lyser i mörkret')" style="background-image: url('./assets/images/tours/rom/rom5.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/pantheon-natt.jpg', 'Rom - Pantheon upplyst i natten')" style="background-image: url('./assets/images/tours/rom/pantheon-natt.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/fasad-murgron.jpg', 'Rom - Fasad klädd i murgröna med röda blommor')" style="background-image: url('./assets/images/tours/rom/fasad-murgron.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/trastevere-dorr.jpg', 'Rom - Charmig dörr i Trastevere med blomkrukor')" style="background-image: url('./assets/images/tours/rom/trastevere-dorr.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/trastevere-gard.jpg', 'Rom - Inre gård med orange hus i Trastevere')" style="background-image: url('./assets/images/tours/rom/trastevere-gard.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/fontana-di-trevi.jpg', 'Rom - Fontana di Trevi i solsken')" style="background-image: url('./assets/images/tours/rom/fontana-di-trevi.jpg');"></div>
+              <div class="gallery-item" onclick="openLightbox('./assets/images/tours/rom/peterskyrkan-vy.jpg', 'Rom - Utsikt mot Peterskyrkan från Passetto di Borgo')" style="background-image: url('./assets/images/tours/rom/peterskyrkan-vy.jpg');"></div>
             </div>
           </section>
           
@@ -338,12 +344,19 @@ document.addEventListener('DOMContentLoaded', function() {
               <p><strong>Platser:</strong> ${romTour.places}</p>
               ${romTour.urgency_text ? `<p class="urgency-text-detail"><strong>${romTour.urgency_text}</strong></p>` : ''}
             </div>
+            ${romTour.includes ? `
+            <div class="tour-includes">
+              <h4>Vad ingår?</h4>
+              <ul>
+                ${romTour.includes.map(item => `<li>${item}</li>`).join('')}
+              </ul>
+            </div>` : ''}
             <a href="https://www.facebook.com/ceciliajakobsson.se" target="_blank" class="book-btn tour-detail-book-btn">
                 <i class="fab fa-facebook-f" aria-hidden="true"></i> Boka denna resa via Facebook
             </a>
-            
+
             <div class="booking-info">
-              <p><strong>Vill du veta mer?</strong> Kontakta mig via Facebook för detaljerad information om resans innehåll, exakt pris och vad som ingår. Jag svarar gärna på alla dina frågor.</p>
+              <p><strong>Vill du veta mer?</strong> Kontakta mig via Facebook för ytterligare upplysningar. Välkommen med din anmälan!</p>
             </div>
           </div>
         `;

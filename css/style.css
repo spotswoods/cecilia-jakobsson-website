@@ -632,7 +632,30 @@
   .booking-info strong {
     color: #333;
   }
-  
+
+  .tour-includes {
+    background-color: #f0f4ff;
+    border-left: 4px solid #1a76d2;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .tour-includes h4 {
+    color: #333;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+
+  .tour-includes ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
   /* Gallery */
   .gallery {
     margin-bottom: 60px;

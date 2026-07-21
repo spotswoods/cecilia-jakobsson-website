@@ -6,8 +6,14 @@
       "short_description": "En resa för dig som besökt Rom tidigare och vill utforska det lite gömda Rom. Vi vandrar genom kvarter där varje hörn, varje plats talar sitt alldeles egna språk – i lugn och ro, till fots med mig som ciceron.",
       "long_description": "En resa för dig som besökt Rom tidigare och som vill utforska det lite gömda Rom. Vi vandrar genom kvarter där varje hörn, varje plats talar sitt alldeles egna språk. En resa där du i lugn och ro upplever Rom till fots med mig som ciceron. Vi bor centralt så vi har nära till allt. Är du intresserad, kontakta mig för ytterligare upplysningar. Välkommen med din anmälan!",
       "days": "5 nätter - 19-24 april 2027",
-      "price": "Kontakta mig",
+      "price": "28 500 kr",
       "places": "Max 10",
+      "includes": [
+        "Flyg tur och retur Arlanda",
+        "Transfer till och från boendet i centrala Rom",
+        "Inträden på väl utvalda platser. Kaffe med dopp på Terazza Caffarelli, besök på Biblioteca Casanatense",
+        "Jag är med som ciceron på våra dagliga promenader och hjälper även till om någon vill göra en egen utflykt"
+      ],
       "image": "./assets/images/tours/tour-rom.jpg",
       "link": "rom.html"
     },
