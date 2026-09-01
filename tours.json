@@ -18,6 +18,17 @@
       "link": "rom.html"
     },
     {
+      "id": 2,
+      "title": "Capri – En resa för dig som i lugn och ro vill uppleva öns guldkorn i maklig takt.",
+      "short_description": "Upplev naturen, färgerna och de dramatiska klipporna tillsammans med mig som ciceron. Vi vandrar både längs turiststråken och de mer dolda stigarna, i lugn takt så du hinner ta in öns dofter, ljud och atmosfär.",
+      "long_description": "Följ med till den mytomspunna ön Capri. Upplev naturen, färgerna, havet, de dramatiska klipporna, Axel Munthes villa San Michele med mig som erfaren ciceron. Vi vandrar såväl turiststråken som de inte så kända stigarna. Allt för att du som resenär ska känna dofterna, höra fåglarna,uppleva det genuina ön har att erbjuda. Vi promenerar omkring i lugn och ro så att du hinner smälta alla nya intryck som denna lilla men storslagna ö bjuder på. Välkommen!",
+      "days": "5 nätter - 27 september - 2 oktober 2027",
+      "price": "Kontakta mig",
+      "places": "Max 12",
+      "image": "./assets/images/tours/tour-capri.jpg",
+      "link": "capri.html"
+    },
+    {
       "id": 4,
       "title": "Capri – Den lilla ön med stora upplevelser",
       "short_description": "En skapande resa till Capri för dig med en kreativ ådra. Dagliga promenader kopplade till kreativa workshops i citronträdens skugga – med Cissi Jakobsson och Sara-Kajsa Vilgotsdotter Lundgren som guider.",
